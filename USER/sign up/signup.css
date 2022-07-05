@@ -1,0 +1,8 @@
+.container h3{
+    text-align: center;
+}
+.formcontrol{
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    width: 50%;
+    margin-left: 25%;
+}

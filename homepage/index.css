@@ -1,0 +1,149 @@
+.top {
+    position: fixed;
+    margin-left: 92%;
+    margin-top: 35%;
+}
+
+.top img {
+    background-color: white;
+    border-radius: 100%;
+}
+
+.menu {
+    box-shadow: 5px 10px 30px #888888;
+    width: 80%;
+    top: 0px;
+    left: 10%;
+    position: fixed;
+}
+
+.container {
+    margin-top: 8%;
+
+}
+
+#iconMenu {
+    width: 60px;
+    height: 60px;
+}
+
+#leftmenu {
+    padding: 10px;
+    box-shadow: 5px 10px 30px #888888;
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+    width: 20%;
+
+
+}
+
+#leftmenu a {
+    color: rgb(35, 35, 35);
+
+    text-decoration: none;
+}
+
+#leftmenu a:hover {
+    color: red;
+}
+
+.rightContent {
+    box-shadow: 5px 10px 30px #888888;
+    margin-left: 40px;
+}
+
+.card {
+    margin-left: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+#poster {
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+#poster img {
+    border-radius: 30px;
+}
+
+#listmenu {
+    list-style: none;
+
+}
+
+#listmenu li {
+    margin-left: -30px;
+    padding: 10px;
+    width: 244px;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+footer {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.newItemManager {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.newItem .item {
+    box-shadow: 5px 10px 10px #888888;
+    text-align: center;
+    width: 300px;
+    margin-left: 25px;
+}
+.contentItem{
+    margin-bottom: 10px;
+}
+.item button{
+    border-radius: 40px;
+    border:none;
+}
+.item button:hover{
+    box-shadow: 5px 2px 10px #888888;
+}
+.item:hover {
+    box-shadow: 5px 10px 60px #888888;
+}
+.Figure{
+    text-align: center;
+    border-top: 2px solid skyblue;
+    padding: 0px;
+  
+    border-left: 2px solid rgb(153, 153, 153);
+    border-right: 2px solid rgb(153, 153, 153);
+    border-bottom: 2px solid rgb(153, 153, 153);
+}
+.Figure h2{
+    background-color: skyblue;
+}
+.controlBar{
+    border-bottom:1px solid rgb(190, 190, 190)
+}
+
+.controlBar button{
+    border:none;
+    background-color: white;
+}
+.controlBar img{
+    width: 40px;
+    height: 40px;
+}
+.itemFigure1{
+    height: 130px;
+    border:1px solid rgb(190, 190, 190);
+    display: flex;
+}
+.itemFigure1:hover{
+    box-shadow: 5px 10px 30px #888888;
+}
+
+.Figure button{
+    border-radius: 40px;
+    border:none;
+}
