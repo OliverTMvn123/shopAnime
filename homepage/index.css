@@ -150,3 +150,24 @@ footer {
 .User{
     display: flex;
 }
+@keyframes move{
+    from{ left: -35px;}
+    to{ left: 25px;}
+}
+.ImageGirl{
+    width: 100px;
+    padding-top: 20px;
+    margin-left: -5px;
+    position:fixed;
+    transform:rotate(70deg);
+ 
+}
+
+.ImageGirl:hover{
+    animation-name: move;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+}
+

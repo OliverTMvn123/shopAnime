@@ -24,6 +24,11 @@
             }
         </script>
     </div>
+    <div class="ImageGirl">
+        <h4 id="SayHi" style="color:white; visibility:hidden;">Hi <?php $user1=$_COOKIE['user1'];  echo("".$user1) ?></h4> 
+        <a onClick="visiableText()"><img id="headGirl" src="/image/head.png"  width="100px"  alt=""></a>
+    </div>
+    
     <div class="menu">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
@@ -62,24 +67,30 @@
                     </form>
                
                     <div class="User">
-                        <form id="btnLogin" action="/USER/login/login.html">
+                        <form id="btnLogout" action="/USER/logout/logout.php" method="post" style="display:none">
+                            <button  class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng Xuất</button>
+                        </form>
+                        <form id="btnLogin" action="/USER/login/login.php">
                             <button  class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng Nhập</button>
                         </form>
-                        <form id="btnSignup" action="/USER/signup/signup.html">
+                        <form id="btnSignup" action="/USER/signup/signup.php">
                             <button  class="btn btn-outline-success" style="margin-left:5px;" type="submit">Đăng Ký</button>
                         </form>
                         <script>
-                            var a= getCookie('user');
-                            console.log(a);
+                            var a= getCookie('user1');
                             if(a!='')
                             {
-                                document.getElementById("btnLogin").setAttribute("style", "display:none"); 
+                                document.getElementById("btnLogin").setAttribute("style", "display:none");
+                                document.getElementById("btnLogout").setAttribute("style", "display:block");
                             }
-                           
+                            else{
+                                document.getElementById("btnLogin").setAttribute("style", "display:block");
+                                document.getElementById("btnLogOut").setAttribute("style", "display:none");
+                            }
+                          
                         </script>
                     </div>
                 </div>
-              
             </div>
         </nav>
     </div>

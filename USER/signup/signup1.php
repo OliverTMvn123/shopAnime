@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/homepage/index.css">
-    <link rel="stylesheet" href="../signup/signup.css">
+    <link rel="stylesheet" href="./signup.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>AnimeShop</title>
@@ -25,7 +25,7 @@
     <div class="menu">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/homepage/index.html"><img id="iconMenu" src="/image/iconMenu.png"
+                <a class="navbar-brand" href="/homepage/index.php"><img id="iconMenu" src="/image/iconMenu.png"
                         alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -35,7 +35,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/homepage/index.html">Trang Chủ</a>
+                            <a class="nav-link active" aria-current="page" href="/homepage/index.php">Trang Chủ</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -59,44 +59,68 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
-                  
-                    <div class="User">
-                        <form id="btnLogin" action="/USER/login/login.html">
-                            <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng Nhập</button>
-                        </form>
-                        <form action="/USER/signup/signup.html">
-                            <button class="btn btn-outline-success" style="margin-left:5px;" type="submit">Đăng Ký</button>
-                        </form>
-                
-                    </div>
+                    <form action="/USER/login/login.php">
+                        <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng
+                            Nhập</button>
+                    </form>
+                    <form action="/USER/sign up/signup.php">
+                        <button class="btn btn-outline-success" style="margin-left:5px;" type="submit">Đăng Ký</button>
+                    </form>
+
                 </div>
-             
             </div>
         </nav>
     </div>
     <div class="container bg-light">
-        <div class="row">
-            <div class="col-3 imageADS"> <img src="/image/rightADS.jpg" width="306" height="432" alt="">
-            </div>
-            <div class="formcontrol col-6">
-                <h3> Đăng Nhập Tài Khoản</h3>
-                <form action="./login.php" method="post">
-                    <div class="mb-2 mt-2">
-                        <label for="Username" class="form-label">Tên đăng nhập:</label>
-                        <input type="text" class="form-control " id="username" placeholder="Enter Username"
-                            name="username">
-                    </div>
-                    <div class="mb-2 mt-2">
-                        <label for="password" class="form-label">Mật Khẩu:</label>
-                        <input type="password" class="form-control " id="password" placeholder="Enter Password"
-                            name="password">
-                    </div>
-                    <button type="submit" class="btn btn-primary " style="margin-left:45%">Submit</button>
-                </form>
-            
-            </div>
-            <div class="col-3 imageADS"><img src="/image/leftADS.jpg" width="306" height="432" alt=""></div>
-        </div>
+            <?php
+            require "../../ConnectDB.php";
+            $username=$_POST['Username'];
+            $password=$_POST['password'];
+            $repassword=$_POST['repassword'];
+            $sdt=$_POST['sdt'];
+            $address=$_POST['address'];
+            $email=$_POST['email'];
+           
+            if(empty($username)||empty($password)||empty($repassword)||empty($sdt)||empty($address)||empty($email))
+            {
+                echo("<script> alert('Vui lòng kiểm tra lại các thông tin đã nhập vào hãy điền đủ chúng') </script>");
+                echo("<script> location='./signup.php' </script>");
+            }
+            else{
+                if($password == $repassword)
+                {
+                    $checkUsername ="SELECT `Username` FROM `login`";
+                    $resuft= $conn->query($checkUsername);
+                    $i=0;
+                    while($row=$resuft->fetch_assoc())
+                    {
+                        if($row['Username']==$username)
+                        {
+                            $i=1;
+                        }
+                    }
+                    if($i==0)
+                    {
+                        setcookie("Email",$email,time()+(83000*30),"/");
+                        $Maxacthuc = rand(100000,999999);
+                        setcookie("verificationCode",$Maxacthuc,time()+(83000*30),"/");
+                        $sql="INSERT INTO `login`(`Username`, `Password`, `Email`, `per`, `phoneNumber`, `address`) 
+                        VALUES ('".$username."','".sha1($password)."','".$email."','0','".$sdt."','".$address."')";
+                        setcookie("dataUser",$sql,time()+(83000*30),"/");
+                        echo("<script> location='./verification.php' </script>");
+                    }
+                    else{
+                        echo("<script> alert('Tài Khoản Đã Tồn Tại Vui Lòng Kiểm Tra Lại') </script>");
+                        echo("<script> location='./signup.php' </script>");
+                    }
+                    
+                }
+                else{
+                    echo("<script> alert('Mật khẩu và nhập lại mật khẩu không khớp vui lòng nhập lại') </script>");
+                    echo("<script> location='./signup.php' </script>");
+                }
+            }
+        ?>
     </div>
     <footer class="bg-light text-center text-white">
         <!-- Grid container -->
@@ -137,3 +161,4 @@
 </body>
 
 </html>
+

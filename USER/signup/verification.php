@@ -26,7 +26,7 @@
     <div class="menu">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/homepage/index.html"><img id="iconMenu" src="/image/iconMenu.png"
+                <a class="navbar-brand" href="/homepage/index.php"><img id="iconMenu" src="/image/iconMenu.png"
                         alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/homepage/index.html">Trang Chủ</a>
+                            <a class="nav-link active" aria-current="page" href="/homepage/index.php">Trang Chủ</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -60,11 +60,11 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
-                    <form action="/USER/login/login.html">
+                    <form action="/USER/login/login.php">
                         <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng
                             Nhập</button>
                     </form>
-                    <form action="/USER/sign up/signup.html">
+                    <form action="/USER/sign up/signup.php">
                         <button class="btn btn-outline-success" style="margin-left:5px;" type="submit">Đăng Ký</button>
                     </form>
 
