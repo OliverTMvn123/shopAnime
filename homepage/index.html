@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="./index.js"></script>
+    <script src="../USER/signup/signup.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>AnimeShop1111
+    <title>AnimeShop
     </title>
 </head>
 
@@ -58,14 +60,26 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
-                    <form action="/USER/login/login.html">
-                        <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng Nhập</button>
-                    </form>
-                    <form action="/USER/sign up/signup.html">
-                        <button class="btn btn-outline-success" style="margin-left:5px;" type="submit">Đăng Ký</button>
-                    </form>
-                   
+               
+                    <div class="User">
+                        <form id="btnLogin" action="/USER/login/login.html">
+                            <button  class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng Nhập</button>
+                        </form>
+                        <form id="btnSignup" action="/USER/signup/signup.html">
+                            <button  class="btn btn-outline-success" style="margin-left:5px;" type="submit">Đăng Ký</button>
+                        </form>
+                        <script>
+                            var a= getCookie('user');
+                            console.log(a);
+                            if(a!='')
+                            {
+                                document.getElementById("btnLogin").setAttribute("style", "display:none"); 
+                            }
+                           
+                        </script>
+                    </div>
                 </div>
+              
             </div>
         </nav>
     </div>

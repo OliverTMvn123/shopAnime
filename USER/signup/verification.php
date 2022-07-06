@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/homepage/index.css">
-    <link rel="stylesheet" href="../signup/signup.css">
+    <link rel="stylesheet" href="./signup.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="./signup.js"></script>    
     <title>AnimeShop</title>
 </head>
 
@@ -59,44 +60,80 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
-                  
-                    <div class="User">
-                        <form id="btnLogin" action="/USER/login/login.html">
-                            <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng Nhập</button>
-                        </form>
-                        <form action="/USER/signup/signup.html">
-                            <button class="btn btn-outline-success" style="margin-left:5px;" type="submit">Đăng Ký</button>
-                        </form>
-                
-                    </div>
+                    <form action="/USER/login/login.html">
+                        <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng
+                            Nhập</button>
+                    </form>
+                    <form action="/USER/sign up/signup.html">
+                        <button class="btn btn-outline-success" style="margin-left:5px;" type="submit">Đăng Ký</button>
+                    </form>
+
                 </div>
-             
             </div>
         </nav>
     </div>
     <div class="container bg-light">
-        <div class="row">
-            <div class="col-3 imageADS"> <img src="/image/rightADS.jpg" width="306" height="432" alt="">
-            </div>
-            <div class="formcontrol col-6">
-                <h3> Đăng Nhập Tài Khoản</h3>
-                <form action="./login.php" method="post">
-                    <div class="mb-2 mt-2">
-                        <label for="Username" class="form-label">Tên đăng nhập:</label>
-                        <input type="text" class="form-control " id="username" placeholder="Enter Username"
-                            name="username">
-                    </div>
-                    <div class="mb-2 mt-2">
-                        <label for="password" class="form-label">Mật Khẩu:</label>
-                        <input type="password" class="form-control " id="password" placeholder="Enter Password"
-                            name="password">
-                    </div>
-                    <button type="submit" class="btn btn-primary " style="margin-left:45%">Submit</button>
-                </form>
+    <?php
+            $Email= $_COOKIE['Email'];
+            echo('<script>console.log(document.cookie)</script>');
+            include  "../../library/PHPMailer-master/src/PHPMailer.php";
+            include  "../../library/PHPMailer-master/src/Exception.php";
+            include  "../../library/PHPMailer-master/src/OAuthTokenProvider.php";
+            include  "../../library/PHPMailer-master/src/OAuth.php";
+            include  "../../library/PHPMailer-master/src/POP3.php";
+            include  "../../library/PHPMailer-master/src/SMTP.php";
+            use PHPMailer\PHPMailer\PHPMailer;
+            use PHPMailer\PHPMailer\SMTP;
+            use PHPMailer\PHPMailer\Exception;
+            $mail = new PHPMailer(true);  
+            try {
+                //Server settings
+                $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+                $mail->isSMTP();                                      // Set mailer to use SMTP
+                $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+                $mail->SMTPAuth = true;                               // Enable SMTP authentication
+                $mail->Username = 'dragonhatgame@gmail.com';                 // SMTP username
+                $mail->Password = 'fyasslwhavoytxwn';                           // SMTP password
+                $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+                $mail->Port = 587;                                    // TCP port to connect to
             
-            </div>
-            <div class="col-3 imageADS"><img src="/image/leftADS.jpg" width="306" height="432" alt=""></div>
+                //Recipients
+                $mail->setFrom('dragonhatgame@gmail.com', 'Mailer');
+                $mail->addAddress($Email, 'User');     // Add a recipient
+                
+            
+                //Attachments
+
+                // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+                // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+            
+                //Content
+
+                $mail->isHTML(true);                                  // Set email format to HTML
+                $mail->Subject = 'VERIFICATION DACS';
+                $mail->Body    = 'ANIMEOLIVERSHOP XIN THÔNG BÁO !? chúng tôi xác nhận được yêu cầu xác nhận đăng kí của bạn. mã xác nhận của bạn là: '.$_COOKIE['verificationCode'];
+                $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            
+                $mail->send();
+                echo("<script> alert('Message has been sent for YOURMAIL pls check this!!!') </script>");
+            } catch (Exception $e) {
+                echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+            }
+
+    ?>
+    <div class="row">
+        <div class="col-3 imageADS"> <img src="/image/rightADS.jpg" width="100%" height="100%" alt=""></div>
+        <div class='col-6' style="padding:120px">
+            
+                <h3 >Xác Nhận Thông Tin Đăng Ký </h3>
+                <input type="text" class="form-control input1" id="verificationcode" placeholder="Enter verification"
+                            name="verification">
+                <button type="submit" class="btn btn-primary " style="margin-left:45%" onClick="checkVerification()">Submit</button>
+                           
+         
         </div>
+        <div class="col-3 imageADS"><img src="/image/leftADS.jpg" width="100%" height="100%" alt=""></div>
+    </div>
     </div>
     <footer class="bg-light text-center text-white">
         <!-- Grid container -->
