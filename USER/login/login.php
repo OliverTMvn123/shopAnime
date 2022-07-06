@@ -24,8 +24,8 @@
         </script>
     </div>
     <div class="ImageGirl">
-        <h4 id="SayHi" style="color:white; visibility:hidden;">Hi <?php $user1=$_COOKIE['user1'];  echo("".$user1) ?></h4> 
-        <a onClick="visiableText()"><img id="headGirl" src="/image/head.png"  width="80px"  alt=""></a>
+        <h5 id="SayHi" style="color:white; visibility:hidden;">Hi <?php $user1=$_COOKIE['user1'];  echo("".$user1) ?></h5> 
+        <a onClick="visiableText()"><img id="headGirl" src="/image/head.png"  width="100px"  alt=""></a>
     </div>
     <div class="menu">
         <nav class="navbar navbar-expand-lg bg-light">

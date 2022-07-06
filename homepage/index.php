@@ -25,7 +25,7 @@
         </script>
     </div>
     <div class="ImageGirl">
-        <h4 id="SayHi" style="color:white; visibility:hidden;">Hi <?php $user1=$_COOKIE['user1'];  echo("".$user1) ?></h4> 
+        <h5 id="SayHi"  style="color:white;width: 100px; visibility:hidden;">Hi <?php $user1=$_COOKIE['user1'];  echo("".$user1) ?></h5> 
         <a onClick="visiableText()"><img id="headGirl" src="/image/head.png"  width="100px"  alt=""></a>
     </div>
     
@@ -82,10 +82,14 @@
                             {
                                 document.getElementById("btnLogin").setAttribute("style", "display:none");
                                 document.getElementById("btnLogout").setAttribute("style", "display:block");
+                                document.getElementById("headGirl").setAttribute("style", "visibility:inherit");
                             }
                             else{
                                 document.getElementById("btnLogin").setAttribute("style", "display:block");
+                                document.getElementById("headGirl").setAttribute("style", "visibility:hidden");
                                 document.getElementById("btnLogOut").setAttribute("style", "display:none");
+                                
+                                
                             }
                           
                         </script>
