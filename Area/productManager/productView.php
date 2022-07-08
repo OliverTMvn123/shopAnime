@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/homepage/index.css">
     <script src="/homepage/index.js"></script>
-    <link rel="stylesheet" href="../signup/signup.css">
+    <script src="/USER/signup/signup.js"></script>
+    <link rel="stylesheet" href="/USER/signup/signup.css">
+    <link rel="stylesheet" href="./productView.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>AnimeShop</title>
@@ -94,28 +96,36 @@
             </div>
         </nav>
     </div>
-    <div class="container bg-light">
-        <div class="row">
-            <div class="col-3 imageADS"> <img src="/image/rightADS.jpg" width="306" height="432" alt="">
+    <div class="container bg-light" >
+        <div id="AreaView" class="row">
+            <div class="controllerProduct col-3" id="leftmenuCP">
+                <ul id="listmenu">
+                    <li style="background-color:lightskyblue;" > <a href="productView.php" target="_top">Danh Sách Sản Phẩm</a></li>
+                    <li><a href="" target="_top">Loại Sản Phẩm</a></li>
+                    <li><a href="addProductView.php" target="_top">Thêm Sản Phẩm</a></li>
+                    <li><a href="" target="_top">Thêm Loại Sản Phẩm</a></li>
+                    </ul>
+            </div>        
+            <div class="col-9" id='selectCP'>
+                  <h1 align="center"> Danh Sách Sản Phẩm</h1>
+                  <hr>  
+                  <div class="listproduct">
+                  <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                      
+                        </tbody>
+                    </table>
+                  </div>
             </div>
-            <div class="formcontrol col-6">
-                <h3> Đăng Nhập Tài Khoản</h3>
-                <form action="./loginSetting.php" method="post">
-                    <div class="mb-2 mt-2">
-                        <label for="Username" class="form-label">Tên đăng nhập:</label>
-                        <input type="text" class="form-control " id="username" placeholder="Enter Username"
-                            name="username">
-                    </div>
-                    <div class="mb-2 mt-2">
-                        <label for="password" class="form-label">Mật Khẩu:</label>
-                        <input type="password" class="form-control " id="password" placeholder="Enter Password"
-                            name="password">
-                    </div>
-                    <button type="submit" class="btn btn-primary " style="margin-left:45%">Submit</button>
-                </form>
-            
-            </div>
-            <div class="col-3 imageADS"><img src="/image/leftADS.jpg" width="306" height="432" alt=""></div>
+        </div>
+        <div class="clear">
         </div>
     </div>
     <footer class="bg-light text-center text-white">

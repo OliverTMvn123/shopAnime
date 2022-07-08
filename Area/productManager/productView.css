@@ -1,0 +1,23 @@
+#AreaView{
+    width: 100%;
+    height: 1000px;
+}
+#leftmenuCP{
+    padding: 10px;
+    box-shadow: 5px 10px 30px #888888;
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+   
+}
+#leftmenuCP a{
+    text-decoration: none;
+    color: rgb(65, 64, 64);
+}
+#leftmenuCP a:hover{
+    color: rgb(250, 111, 111);
+}
+#selectCP{
+    box-shadow: 5px 10px 30px #888888;
+}
+.listproduct{
+    padding:10px 50px;
+}

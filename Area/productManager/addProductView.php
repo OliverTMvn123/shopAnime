@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/homepage/index.css">
     <script src="/homepage/index.js"></script>
-    <link rel="stylesheet" href="../signup/signup.css">
+    <script src="/USER/signup/signup.js"></script>
+    <link rel="stylesheet" href="/USER/signup/signup.css">
+    <link rel="stylesheet" href="./productView.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>AnimeShop</title>
@@ -94,28 +96,54 @@
             </div>
         </nav>
     </div>
-    <div class="container bg-light">
-        <div class="row">
-            <div class="col-3 imageADS"> <img src="/image/rightADS.jpg" width="306" height="432" alt="">
+    <div class="container bg-light" >
+        <div id="AreaView" class="row">
+            <div class="controllerProduct col-3" id="leftmenuCP">
+                <ul id="listmenu">
+                    <li> <a href="productView.php" target="_top">Danh Sách Sản Phẩm</a></li>
+                    <li><a href="" target="_top">Loại Sản Phẩm</a></li>
+                    <li style="background-color:lightskyblue" ><a href="addProductView.php" target="_top" >Thêm Sản Phẩm</a></li>
+                    <li><a href="" target="_top">Thêm Loại Sản Phẩm</a></li>
+                    </ul>
+            </div>        
+            <div class="col-9" id='selectCP'>
+                  <h1 align="center"> Thêm Sản Phẩm</h1>
+                  <hr>  
+                  <div class="listproduct">
+                    <form action="/action_page.php" class="was-validated">
+                        <div class="mb-3 mt-3">
+                            <label for="uname" class="form-label">Tên Sản Phẩm:</label>
+                            <input type="text" class="form-control" id="uname" placeholder="Enter Tên Sản Phẩm" name="uname" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="mb-3">
+                        <select class="form-select form-select-lg">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pwd" class="form-label">Giá Tiền:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Giá Tiền" name="pswd" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
+                            <label class="form-check-label" for="myCheck">I agree on blabla.</label>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Check this checkbox to continue.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
             </div>
-            <div class="formcontrol col-6">
-                <h3> Đăng Nhập Tài Khoản</h3>
-                <form action="./loginSetting.php" method="post">
-                    <div class="mb-2 mt-2">
-                        <label for="Username" class="form-label">Tên đăng nhập:</label>
-                        <input type="text" class="form-control " id="username" placeholder="Enter Username"
-                            name="username">
-                    </div>
-                    <div class="mb-2 mt-2">
-                        <label for="password" class="form-label">Mật Khẩu:</label>
-                        <input type="password" class="form-control " id="password" placeholder="Enter Password"
-                            name="password">
-                    </div>
-                    <button type="submit" class="btn btn-primary " style="margin-left:45%">Submit</button>
-                </form>
-            
-            </div>
-            <div class="col-3 imageADS"><img src="/image/leftADS.jpg" width="306" height="432" alt=""></div>
+        </div>
+        <div class="clear">
         </div>
     </div>
     <footer class="bg-light text-center text-white">
