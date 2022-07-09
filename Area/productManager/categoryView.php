@@ -100,8 +100,8 @@
         <div id="AreaView" class="row">
             <div class="controllerProduct col-3" id="leftmenuCP">
                 <ul id="listmenu">
-                    <li style="background-color:lightskyblue;" > <a href="productView.php" target="_top">Danh Sách Sản Phẩm</a></li>
-                    <li><a href="categoryView.php" target="_top">Loại Sản Phẩm</a></li>
+                    <li  > <a href="productView.php" target="_top">Danh Sách Sản Phẩm</a></li>
+                    <li style="background-color:lightskyblue;"><a href="categoryView.php" target="_top">Loại Sản Phẩm</a></li>
                     <li><a href="addProductView.php" target="_top">Thêm Sản Phẩm</a></li>
                     <li><a href="addCategoryView.php" target="_top">Thêm Loại Sản Phẩm</a></li>
                     </ul>
@@ -110,39 +110,26 @@
                   <h1 align="center"> Danh Sách Sản Phẩm</h1>
                   <hr>  
                   <div class="listproduct">
-                  <table class="table table-striped" id="table">
+                  <table class="table table-striped">
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Tên Sản Phẩm</th>
-                            <th>Loại Sản Phẩm</th>
-                            <th>Giá Bán</th>
-                            <th>Hình Ảnh
+                            <th align="center">Tên Loại Sản Phẩm</th>
                         </tr>
                         </thead>
                         <tbody>
-                            <tr>
                             <?php
                                require '../../ConnectDB.php';
-                               $sql='SELECT * FROM `product`';
+                               $sql='SELECT * FROM `category`';
                                $resuft=$conn->query($sql);
                                while($row=$resuft->fetch_assoc())
                                {
-                                $image=$row['image'];
                                 echo("<tr>
                                         <th>".$row['ID']."</th>
-                                        <th>".$row['nameProduct']."</th>
-                                        <th>".$row['nameCategory']."</th>
-                                        <th>".$row['Price']."</th>
-                                        <th>
-                                            <img src='uploads/".$image."' alt='' width='60' height='60'>
-                                        </th>
+                                        <th >".$row['nameCategory']."</th>
                                     </tr>");
                                }             
                             ?>
-                           
-                            </tr>
-                        
                         </tbody>
                     </table>
                   </div>

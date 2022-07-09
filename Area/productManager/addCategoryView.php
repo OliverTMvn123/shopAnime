@@ -100,52 +100,33 @@
         <div id="AreaView" class="row">
             <div class="controllerProduct col-3" id="leftmenuCP">
                 <ul id="listmenu">
-                    <li style="background-color:lightskyblue;" > <a href="productView.php" target="_top">Danh Sách Sản Phẩm</a></li>
+                    <li> <a href="productView.php" target="_top">Danh Sách Sản Phẩm</a></li>
                     <li><a href="categoryView.php" target="_top">Loại Sản Phẩm</a></li>
-                    <li><a href="addProductView.php" target="_top">Thêm Sản Phẩm</a></li>
-                    <li><a href="addCategoryView.php" target="_top">Thêm Loại Sản Phẩm</a></li>
+                    <li  ><a href="addProductView.php" target="_top" >Thêm Sản Phẩm</a></li>
+                    <li style="background-color:lightskyblue"><a href="addCategoryView.php" target="_top">Thêm Loại Sản Phẩm</a></li>
                     </ul>
             </div>        
             <div class="col-9" id='selectCP'>
-                  <h1 align="center"> Danh Sách Sản Phẩm</h1>
+                  <h1 align="center"> Thêm Loại Sản Phẩm</h1>
                   <hr>  
                   <div class="listproduct">
-                  <table class="table table-striped" id="table">
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Tên Sản Phẩm</th>
-                            <th>Loại Sản Phẩm</th>
-                            <th>Giá Bán</th>
-                            <th>Hình Ảnh
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <?php
-                               require '../../ConnectDB.php';
-                               $sql='SELECT * FROM `product`';
-                               $resuft=$conn->query($sql);
-                               while($row=$resuft->fetch_assoc())
-                               {
-                                $image=$row['image'];
-                                echo("<tr>
-                                        <th>".$row['ID']."</th>
-                                        <th>".$row['nameProduct']."</th>
-                                        <th>".$row['nameCategory']."</th>
-                                        <th>".$row['Price']."</th>
-                                        <th>
-                                            <img src='uploads/".$image."' alt='' width='60' height='60'>
-                                        </th>
-                                    </tr>");
-                               }             
-                            ?>
-                           
-                            </tr>
-                        
-                        </tbody>
-                    </table>
-                  </div>
+                    <form action="./backend/addCategory.php" class="was-validated" method="get">
+                        <div class="mb-3 mt-3">
+                            <label for="uname" class="form-label">Tên Loại Sản Phẩm:</label>
+                            <input type="text" class="form-control" id="uname" placeholder="Enter Tên Loại Sản Phẩm" name="uname" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
+                            <label class="form-check-label" for="myCheck">I agree on create category.</label>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Check this checkbox to continue.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="clear">

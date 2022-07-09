@@ -89,13 +89,21 @@ footer {
 .newItemManager {
     margin-top: 80px;
     margin-bottom: 80px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
-
-.newItem .item {
+.newItem{
+    display: flex;
+    width: 1300px;
+    height: 400px;
+    flex-wrap: wrap;
+}
+.item {
     box-shadow: 5px 10px 10px #888888;
     text-align: center;
     width: 300px;
     margin-left: 25px;
+    margin-bottom: 20px;
 }
 .contentItem{
     margin-bottom: 10px;

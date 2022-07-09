@@ -1,6 +1,6 @@
 #AreaView{
     width: 100%;
-    height: 1000px;
+
 }
 #leftmenuCP{
     padding: 10px;
@@ -17,7 +17,10 @@
 }
 #selectCP{
     box-shadow: 5px 10px 30px #888888;
+    padding: 15px;
 }
 .listproduct{
+    height: 90%;
     padding:10px 50px;
+    overflow: scroll;
 }

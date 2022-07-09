@@ -101,16 +101,16 @@
             <div class="controllerProduct col-3" id="leftmenuCP">
                 <ul id="listmenu">
                     <li> <a href="productView.php" target="_top">Danh Sách Sản Phẩm</a></li>
-                    <li><a href="" target="_top">Loại Sản Phẩm</a></li>
+                    <li><a href="categoryView.php" target="_top">Loại Sản Phẩm</a></li>
                     <li style="background-color:lightskyblue" ><a href="addProductView.php" target="_top" >Thêm Sản Phẩm</a></li>
-                    <li><a href="" target="_top">Thêm Loại Sản Phẩm</a></li>
+                    <li><a href="addCategoryView.php" target="_top">Thêm Loại Sản Phẩm</a></li>
                     </ul>
             </div>        
             <div class="col-9" id='selectCP'>
                   <h1 align="center"> Thêm Sản Phẩm</h1>
                   <hr>  
                   <div class="listproduct">
-                    <form action="/action_page.php" class="was-validated">
+                    <form action="./backend/addProduct.php" class="was-validated" method='post' enctype="multipart/form-data">
                         <div class="mb-3 mt-3">
                             <label for="uname" class="form-label">Tên Sản Phẩm:</label>
                             <input type="text" class="form-control" id="uname" placeholder="Enter Tên Sản Phẩm" name="uname" required>
@@ -118,19 +118,31 @@
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                         <div class="mb-3">
-                        <select class="form-select form-select-lg">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
+                        <select class="form-select form-select-lg" name='nameCategory'>
+                                    <?php
+                                        require '../../ConnectDB.php';
+                                        $sql='SELECT * FROM `category`';
+                                        $resuft=$conn->query($sql);
+                                        while($row=$resuft->fetch_assoc())
+                                        {
+                                            echo("  <option>".$row['nameCategory']."</option>
+                                            ");
+                                        }             
+                                    ?>
                                 </select>
                         </div>
                         <div class="mb-3">
                             <label for="pwd" class="form-label">Giá Tiền:</label>
-                            <input type="password" class="form-control" id="pwd" placeholder="Giá Tiền" name="pswd" required>
+                            <input type="text" class="form-control" id="pwd" placeholder="Giá Tiền" name="pswd" required>
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
+                        <div class="mb-3">
+                            <label for="pwd" class="form-label">Hình Ảnh:</label>
+                            <input type="file" class="form-control" id="pwd" placeholder="Giá Tiền" name="picture" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>                
 
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>

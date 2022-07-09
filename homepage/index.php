@@ -133,8 +133,8 @@
         </div>
         <div class="newItemManager">
             <h2> Sản phẩm mới nhất </h2>
-            <div class="row newItem">
-                <div class="col-3 item">
+            <div class="newItem">
+                <div class="item">
                     <div class="pictureItem">
                         <img id="" src="/image/item1.jpg" width="100%" height="60%" alt="">
                     </div>
@@ -145,7 +145,18 @@
                             <button> Thêm vào giỏ hàng</button>
                     </div>
                 </div>
-                <div class="col-3 item">
+                <div class="item">
+                    <div class="pictureItem">
+                        <img id="" src="/image/item1.jpg" width="100%" height="60%" alt="">
+                    </div>
+                    <div class="contentItem">
+                        <h4 class="nameItem">Item1</h4>
+                        <h3 class="price">20000$</h4>
+                            <button width="10px"><img src="/image/searchIcon.png" width="15px" alt=""></button>
+                            <button> Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+                <div class="item">
                     <div class="pictureItem">
                         <img id="" src="/image/item2.jpg" width="100%" height="60%" alt="">
                     </div>
@@ -156,7 +167,7 @@
                             <button> Thêm vào giỏ hàng</button>
                     </div>
                 </div>
-                <div class="col-3 item">
+                <div class="item">
                     <div class="pictureItem">
                         <img id="" src="/image/item3.jpg" width="100%" height="60%" alt="">
                     </div>
@@ -167,7 +178,7 @@
                             <button> Thêm vào giỏ hàng</button>
                     </div>
                 </div>
-                <div class="col-3 item">
+                <div class="item">
                     <div class="pictureItem">
                         <img id="" src="/image/item4.jpg" width="100%" height="60%" alt="">
                     </div>
