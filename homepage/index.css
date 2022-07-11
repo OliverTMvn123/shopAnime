@@ -1,3 +1,6 @@
+html{
+    font-family: 'Raleway', sans-serif;
+}
 .top {
     position: fixed;
     margin-left: 92%;
@@ -89,20 +92,21 @@ footer {
 .newItemManager {
     margin-top: 80px;
     margin-bottom: 80px;
-    overflow-x: hidden;
-    overflow-y: scroll;
+   
 }
 .newItem{
     display: flex;
     width: 1300px;
     height: 400px;
     flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 .item {
     box-shadow: 5px 10px 10px #888888;
     text-align: center;
     width: 300px;
-    margin-left: 25px;
+    margin-left: 14px;
     margin-bottom: 20px;
 }
 .contentItem{
@@ -122,7 +126,7 @@ footer {
     text-align: center;
     border-top: 2px solid skyblue;
     padding: 0px;
-  
+    margin: 10px;
     border-left: 2px solid rgb(153, 153, 153);
     border-right: 2px solid rgb(153, 153, 153);
     border-bottom: 2px solid rgb(153, 153, 153);
@@ -179,3 +183,13 @@ footer {
     
 }
 
+.nameItem{
+    height: 80px;
+    padding: 10px;
+}
+.price{
+    height: 40px;
+}
+.btnNewItem{
+    height: 23px;
+}

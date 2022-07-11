@@ -10,13 +10,16 @@
     <script src="../USER/signup/signup.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">    
     <title>AnimeShop
     </title>
 </head>
 
 <body class="bg-dark">
     <div class="top">
-        <img src="/image/topicon.png" width="60px" onclick="hello()" alt="">
+        <img src="/image/topicon1.png" width="60px" onclick="hello()" alt="">
         <script>
             function hello() {
                 document.body.scrollTop = 0;
@@ -25,10 +28,12 @@
         </script>
     </div>
     <div class="ImageGirl">
-        <h5 id="SayHi"  style="color:white;width: 100px; visibility:hidden;">Hi <?php $user1=$_COOKIE['user1'];  echo("".$user1) ?></h5> 
-        <a onClick="visiableText()"><img id="headGirl" src="/image/head.png"  width="100px"  alt=""></a>
+        <h5 id="SayHi" style="color:white;width: 100px; visibility:hidden;">Hi
+            <?php $user1=$_COOKIE['user1'];  echo("".$user1) ?>
+        </h5>
+        <a onClick="visiableText()"><img id="headGirl" src="/image/head.png" width="100px" alt=""></a>
     </div>
-    
+
     <div class="menu">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
@@ -49,9 +54,22 @@
                                 Sản phẩm
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Quần áo anime</a></li>
-                                <li><a class="dropdown-item" href="#">Phụ Kiện Anime</a></li>
-                                <li><a class="dropdown-item" href="#">Sách</a></li>
+                                <li><a class="dropdown-item" href="#">Mô hình</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Áo - Trang Phục</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Balo dụng cụ học tập</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Móc Khóa Huy Hiệu</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Trang sức</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Đồng Hồ</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Gối Thú Nhồi Bông</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">In Sản Phẩm Theo Yêu Cầu</a></li>
+
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -65,33 +83,35 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
-               
+
                     <div class="User">
                         <form id="btnLogout" action="/USER/logout/logout.php" method="post" style="display:none">
-                            <button  class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng Xuất</button>
+                            <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng
+                                Xuất</button>
                         </form>
                         <form id="btnLogin" action="/USER/login/login.php">
-                            <button  class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng Nhập</button>
+                            <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng
+                                Nhập</button>
                         </form>
                         <form id="btnSignup" action="/USER/signup/signup.php">
-                            <button  class="btn btn-outline-success" style="margin-left:5px;" type="submit">Đăng Ký</button>
+                            <button class="btn btn-outline-success" style="margin-left:5px;" type="submit">Đăng
+                                Ký</button>
                         </form>
                         <script>
-                            var a= getCookie('user1');
-                            if(a!='')
-                            {
+                            var a = getCookie('user1');
+                            if (a != '') {
                                 document.getElementById("btnLogin").setAttribute("style", "display:none");
                                 document.getElementById("btnLogout").setAttribute("style", "display:block");
                                 document.getElementById("headGirl").setAttribute("style", "visibility:inherit");
                             }
-                            else{
+                            else {
                                 document.getElementById("btnLogin").setAttribute("style", "display:block");
                                 document.getElementById("headGirl").setAttribute("style", "visibility:hidden");
                                 document.getElementById("btnLogOut").setAttribute("style", "display:none");
-                                
-                                
+
+
                             }
-                          
+
                         </script>
                     </div>
                 </div>
@@ -134,61 +154,36 @@
         <div class="newItemManager">
             <h2> Sản phẩm mới nhất </h2>
             <div class="newItem">
-                <div class="item">
-                    <div class="pictureItem">
-                        <img id="" src="/image/item1.jpg" width="100%" height="60%" alt="">
-                    </div>
-                    <div class="contentItem">
-                        <h4 class="nameItem">Item1</h4>
-                        <h3 class="price">20000$</h4>
-                            <button width="10px"><img src="/image/searchIcon.png" width="15px" alt=""></button>
-                            <button> Thêm vào giỏ hàng</button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pictureItem">
-                        <img id="" src="/image/item1.jpg" width="100%" height="60%" alt="">
-                    </div>
-                    <div class="contentItem">
-                        <h4 class="nameItem">Item1</h4>
-                        <h3 class="price">20000$</h4>
-                            <button width="10px"><img src="/image/searchIcon.png" width="15px" alt=""></button>
-                            <button> Thêm vào giỏ hàng</button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pictureItem">
-                        <img id="" src="/image/item2.jpg" width="100%" height="60%" alt="">
-                    </div>
-                    <div class="contentItem">
-                        <h4 class="nameItem">Item1</h4>
-                        <h3 class="price">20000$</h4>
-                            <button width="10px"><img src="/image/searchIcon.png" width="15px" alt=""></button>
-                            <button> Thêm vào giỏ hàng</button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pictureItem">
-                        <img id="" src="/image/item3.jpg" width="100%" height="60%" alt="">
-                    </div>
-                    <div class="contentItem">
-                        <h4 class="nameItem">Item1</h4>
-                        <h3 class="price">20000$</h4>
-                            <button width="10px"><img src="/image/searchIcon.png" width="15px" alt=""></button>
-                            <button> Thêm vào giỏ hàng</button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pictureItem">
-                        <img id="" src="/image/item4.jpg" width="100%" height="60%" alt="">
-                    </div>
-                    <div class="contentItem">
-                        <h4 class="nameItem">Item1</h4>
-                        <h3 class="price">20000$</h4>
-                            <button width="10px"><img src="/image/searchIcon.png" width="15px" alt=""></button>
-                            <button> Thêm vào giỏ hàng</button>
-                    </div>
-                </div>
+                
+                <?php
+                require '../ConnectDB.php';
+                $sql='SELECT * FROM `product` ORDER BY ID DESC';
+                $resuft= $conn->query($sql);
+                $i=0;
+                while($row=$resuft->fetch_assoc())
+                {
+                    if($i==8)
+                    {
+                      break;
+                    }
+                  echo(' <div class="item">
+                  <div class="pictureItem">
+                      <img id="" src="/Area/productManager/uploads/'.$row['image'].'" width="300" height="300" alt="">
+                  </div>
+                  <div class="contentItem">
+                      <h4 class="nameItem">'.$row['nameProduct'].'</h4>
+                      <h3 class="price" style="color:red">'.$row['Price'].'$</h3>
+                      <div class="btnNewItem">
+                        <button width="10px"><img src="/image/searchIcon.png" width="15px" alt=""></button>
+                        <button> Thêm vào giỏ hàng</button>
+                      </div>
+                          
+                  </div>
+              </div>');
+              $i++;
+             
+                }
+                ?>
 
             </div>
         </div>
@@ -198,8 +193,8 @@
                 <div class="col-3">
                     <h2> Mô Hình </h2>
                 </div>
-                <div class="col-9 controlBar"> 
-                    
+                <div class="col-9 controlBar">
+                    <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Xem Thêm</button>
                 </div>
             </div>
             <div class="row">
@@ -207,300 +202,190 @@
                 <div class="col-9 itemFigure">
                     <div class="row">
                         <div class="col-6 COL">
-                            <div class="row-3 itemFigure1 ">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
+                            <?php
+                                require '../ConnectDB.php';
+                                $sql='SELECT * FROM `product` ORDER BY ID DESC LIMIT 4';
+                                $resuft= $conn->query($sql);
+                                while($row=$resuft->fetch_assoc()){
+                                    echo('<div class="row-3 itemFigure1 ">
+                                            <div class="col-7">
+                                                <h5>'.$row['nameProduct'].'</h4>
+                                                    <h4 style="color:red">'.$row['Price'].'$</h3>
+                                                        <button width="8px"><img src="/image/searchIcon.png" width="15px"
+                                                                alt=""></button>
+                                                        <button> Thêm vào giỏ hàng</button>
+                                            </div>
+                                            <div class="col-5"><img src="/Area/productManager/uploads/'.$row['image'].'" width="194" height="128" alt=""></div>
+                                        </div>');
+                                }
+                            ?>
                         </div>
                         <div class="col-6 COL">
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
+                            <?php
+                                require '../ConnectDB.php';
+                                $sql='SELECT * FROM `product` WHERE `nameCategory`="Mô Hình" ORDER BY ID DESC';
+                                $resuft= $conn->query($sql);
+                                $i=0;
+                                while($row=$resuft->fetch_assoc()){
+                                    if($i==8)
+                                    {
+                                        break;
+                                    }
+                                    if($i>=4)
+                                    {
+                                        echo('<div class="row-3 itemFigure1 ">
+                                        <div class="col-7">
+                                            <h5>'.$row['nameProduct'].'</h4>
+                                                <h4 style="color:red">'.$row['Price'].'$</h3>
+                                                    <button width="8px"><img src="/image/searchIcon.png" width="15px"
+                                                            alt=""></button>
+                                                    <button> Thêm vào giỏ hàng</button>
+                                        </div>
+                                        <div class="col-5"><img src="/Area/productManager/uploads/'.$row['image'].'" width="194" height="128" alt=""></div>
+                                    </div>');
+                                    }
+                                    
+                                     $i++;
+                                }
+                            ?>
                         </div>
 
                     </div>
                 </div>
             </div>
         </div>
-        <div class="Figure ">
+        <div class="Figure" style="border-top: 2px solid lightgreen">
 
             <div class="row">
-                <div class="col-3">
-                    <h2> Quần áo </h2>
+                <div  class="col-3" >
+                    <h2 style="background:lightgreen"> Quần áo </h2>
                 </div>
-                <div class="col-9 controlBar"> 
+                <div class="col-9 controlBar">
+                <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Xem Thêm</button>
                 </div>
             </div>
             <div class="row">
-                <div class="col-3"><img src="/image/thumbnail.png" width="306px" alt=""></div>
+                <div class="col-3"><img src="/image/thumbnail1.png" width="306px" alt=""></div>
                 <div class="col-9 itemFigure">
                     <div class="row">
                         <div class="col-6 COL">
-                            <div class="row-3 itemFigure1 ">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
+                            <?php
+                                require '../ConnectDB.php';
+                                $sql='SELECT * FROM `product` WHERE `nameCategory`="Quần Áo Cosplay" ORDER BY ID DESC LIMIT 4';
+                                $resuft= $conn->query($sql);
+                                while($row=$resuft->fetch_assoc()){
+                                    echo('<div class="row-3 itemFigure1 ">
+                                            <div class="col-7">
+                                                <h5>'.$row['nameProduct'].'</h4>
+                                                    <h4 style="color:red">'.$row['Price'].'$</h3>
+                                                        <button width="8px"><img src="/image/searchIcon.png" width="15px"
+                                                                alt=""></button>
+                                                        <button> Thêm vào giỏ hàng</button>
+                                            </div>
+                                            <div class="col-5"><img src="/Area/productManager/uploads/'.$row['image'].'" width="194" height="128" alt=""></div>
+                                        </div>');
+                                }
+                            ?>
                         </div>
                         <div class="col-6 COL">
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
+                            <?php
+                                require '../ConnectDB.php';
+                                $sql='SELECT * FROM `product` WHERE `nameCategory`="Quần Áo Cosplay" ORDER BY ID DESC';
+                                $resuft= $conn->query($sql);
+                                $i=0;
+                                while($row=$resuft->fetch_assoc()){
+                                    if($i==8)
+                                    {
+                                        break;
+                                    }
+                                    if($i>=4)
+                                    {
+                                        echo('<div class="row-3 itemFigure1 ">
+                                        <div class="col-7">
+                                            <h5>'.$row['nameProduct'].'</h4>
+                                                <h4 style="color:red">'.$row['Price'].' $</h3>
+                                                    <button width="8px"><img src="/image/searchIcon.png" width="15px"
+                                                            alt=""></button>
+                                                    <button> Thêm vào giỏ hàng</button>
+                                        </div>
+                                        <div class="col-5"><img src="/Area/productManager/uploads/'.$row['image'].'" width="194" height="128" alt=""></div>
+                                    </div>');
+                                    }
+                                    
+                                     $i++;
+                                }
+                            ?>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-        <div class="Figure">
+        <div class="Figure"style="border-top: 2px solid #EE82EE">
 
-            <div class="row">
-                <div class="col-3">
-                    <h2> Balo - dụng cụ học tập </h2>
+                <div class="row">
+                    <div class="col-3">
+                        <h2 style="background:#EE82EE"> Balo - dụng cụ học tập </h2>
+                    </div>
+                    <div class="col-9 controlBar">
+                    <button class="btn btn-outline-success" style="margin-left:5px; margin-top:20px " type="submit"> Xem Thêm</button>
+                    </div>
                 </div>
-                <div class="col-9 controlBar"> 
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3"><img src="/image/thumbnail.png" width="306px" alt=""></div>
-                <div class="col-9 itemFigure">
-                    <div class="row">
+                <div class="row">
+                    <div class="col-3"><img src="/image/thumbnail2.jpg" width="306px" alt=""></div>
+                    <div class="col-9 itemFigure">
                         <div class="col-6 COL">
-                            <div class="row-3 itemFigure1 ">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
+                            <?php
+                                require '../ConnectDB.php';
+                                $sql='SELECT * FROM `product` WHERE `nameCategory`="Balo và dụng cụ học tập" ORDER BY ID DESC LIMIT 4';
+                                $resuft= $conn->query($sql);
+                                while($row=$resuft->fetch_assoc()){
+                                    echo('<div class="row-3 itemFigure1 ">
+                                            <div class="col-7">
+                                                <h5>'.$row['nameProduct'].'</h4>
+                                                    <h4 style="color:red">'.$row['Price'].'$</h3>
+                                                        <button width="8px"><img src="/image/searchIcon.png" width="15px"
+                                                                alt=""></button>
+                                                        <button> Thêm vào giỏ hàng</button>
+                                            </div>
+                                            <div class="col-5"><img src="/Area/productManager/uploads/'.$row['image'].'" width="194" height="128" alt=""></div>
+                                        </div>');
+                                }
+                            ?>
                         </div>
                         <div class="col-6 COL">
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
-                            <div class="row-3 itemFigure1">
-                                <div class="col-7">
-                                    <h5>nameProduct</h4>
-                                        <h4>price</h3>
-                                            <button width="8px"><img src="/image/searchIcon.png" width="15px"
-                                                    alt=""></button>
-                                            <button> Thêm vào giỏ hàng</button>
-                                </div>
-                                <div class="col-5"><img src="" width="194" height="128" alt=""></div>
-                            </div>
+                            <?php
+                                require '../ConnectDB.php';
+                                $sql='SELECT * FROM `product` WHERE `nameCategory`="Balo và dụng cụ học tập" ORDER BY ID DESC';
+                                $resuft= $conn->query($sql);
+                                $i=0;
+                                while($row=$resuft->fetch_assoc()){
+                                    if($i==8)
+                                    {
+                                        break;
+                                    }
+                                    if($i>=4)
+                                    {
+                                        echo('<div class="row-3 itemFigure1 ">
+                                        <div class="col-7">
+                                            <h5>'.$row['nameProduct'].'</h4>
+                                                <h4 style="color:red">'.$row['Price'].'$</h3>
+                                                    <button width="8px"><img src="/image/searchIcon.png" width="15px"
+                                                            alt=""></button>
+                                                    <button> Thêm vào giỏ hàng</button>
+                                        </div>
+                                        <div class="col-5"><img src="/Area/productManager/uploads/'.$row['image'].'" width="194" height="128" alt=""></div>
+                                    </div>');
+                                    }
+                                    
+                                     $i++;
+                                }
+                            ?>
                         </div>
 
                     </div>
+
                 </div>
             </div>
-        </div>
-
-
     </div>
     <footer class="bg-light text-center text-white">
         <!-- Grid container -->
