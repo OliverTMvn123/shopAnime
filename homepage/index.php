@@ -54,21 +54,21 @@
                                 Sản phẩm
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Mô hình</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/figure.php">Mô hình</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="#">Áo - Trang Phục</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/clothes.php">Áo - Trang Phục</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="#">Balo dụng cụ học tập</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/BaloAndMore.php">Balo dụng cụ học tập</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="#">Móc Khóa Huy Hiệu</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/keychain.php">Móc Khóa Huy Hiệu</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="#">Trang sức</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/Accessories.php">Trang sức</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="#">Đồng Hồ</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/watch.php">Đồng Hồ</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="#">Gối Thú Nhồi Bông</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/Comingsoon.php">Gối Thú Nhồi Bông</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="#">In Sản Phẩm Theo Yêu Cầu</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/Comingsoon.php">In Sản Phẩm Theo Yêu Cầu</a></li>
 
                             </ul>
                         </li>
@@ -123,25 +123,25 @@
             <div class="col-2" id="leftmenu">
                 <ul id="listmenu">
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon1.png?v=245"
-                            alt=""> <a href="" target="_top">Mô hình</a></li>
+                            alt=""> <a href="/ProductForClient/SelectByCategory/figure.php" target="_top">Mô hình</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon2.png?v=245"
-                            alt=""><a href="" target="_top"> Áo - Trang Phục</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/clothes.php" target="_top"> Áo - Trang Phục</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon3.png?v=245"
-                            alt=""><a href="" target="_top"> Balo dụng cụ học tập</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/BaloAndMore.php" target="_top"> Balo dụng cụ học tập</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon4.png?v=245"
-                            alt=""><a href="" target="_top"> Móc Khóa Huy Hiệu</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/keychain.php" target="_top"> Móc Khóa Huy Hiệu</a></li>
                     <li> <img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon5.png?v=245"
-                            alt=""><a href="" target="_top"> Trang sức</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/Accessories.php" target="_top"> Trang sức</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon6.png?v=245"
-                            alt=""> <a href="" target="_top"> Đồng Hồ</a></li>
+                            alt=""> <a href="/ProductForClient/SelectByCategory/watch.php" target="_top"> Đồng Hồ</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon7.png?v=245"
-                            alt=""><a href="" target="_top"> Phụ Kiện Đầu</a> </li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/Comingsoon.php" target="_top"> Phụ Kiện Đầu</a> </li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon8.png?v=245"
-                            alt=""><a href="" target="_top"> Gối Thú Nhồi Bông</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/Comingsoon.php" target="_top"> Gối Thú Nhồi Bông</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon9.png?v=245"
-                            alt=""><a href="" target="_top"> In Sản Phẩm Theo Yêu Cầu</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/Comingsoon.php" target="_top"> In Sản Phẩm Theo Yêu Cầu</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon10.png?v=245"
-                            alt=""><a href="" target="_top"> Phụ Kiện Khác</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/Comingsoon.php" target="_top"> Phụ Kiện Khác</a></li>
                 </ul>
 
             </div>
@@ -166,7 +166,7 @@
                     {
                       break;
                     }
-                  echo(' <div class="item">
+                  echo('<div class="item">
                   <div class="pictureItem">
                       <img id="" src="/Area/productManager/uploads/'.$row['image'].'" width="300" height="300" alt="">
                   </div>
@@ -194,7 +194,18 @@
                     <h2> Mô Hình </h2>
                 </div>
                 <div class="col-9 controlBar">
-                    <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Xem Thêm</button>
+                    <button class="btn btn-outline-success" style="margin-left:5px;"  onClick="chuyenhuong1()" type="submit">Xem Thêm</button>
+                    <script>
+                        function chuyenhuong1(){
+                                location='/ProductForClient/SelectByCategory/figure.php';
+                        }
+                        function chuyenhuong2(){
+                                location='/ProductForClient/SelectByCategory/clothes.php';
+                        }
+                        function chuyenhuong3(){
+                                location='/ProductForClient/SelectByCategory/BaloAndMore.php';
+                        }
+                    </script>
                 </div>
             </div>
             <div class="row">
@@ -261,7 +272,7 @@
                     <h2 style="background:lightgreen"> Quần áo </h2>
                 </div>
                 <div class="col-9 controlBar">
-                <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Xem Thêm</button>
+                <button class="btn btn-outline-success" style="margin-left:5px; " onclick="chuyenhuong2()" type="submit">Xem Thêm</button>
                 </div>
             </div>
             <div class="row">
@@ -327,7 +338,7 @@
                         <h2 style="background:#EE82EE"> Balo - dụng cụ học tập </h2>
                     </div>
                     <div class="col-9 controlBar">
-                    <button class="btn btn-outline-success" style="margin-left:5px; margin-top:20px " type="submit"> Xem Thêm</button>
+                    <button class="btn btn-outline-success" style="margin-left:5px; margin-top:20px " onclick="chuyenhuong3()" type="submit"> Xem Thêm</button>
                     </div>
                 </div>
                 <div class="row">

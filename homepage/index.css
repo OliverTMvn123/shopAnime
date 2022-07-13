@@ -97,7 +97,7 @@ footer {
 .newItem{
     display: flex;
     width: 1300px;
-    height: 400px;
+    height: 470px;
     flex-wrap: wrap;
     overflow-x: hidden;
     overflow-y: scroll;
