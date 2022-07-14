@@ -50,9 +50,21 @@
                                 Sản phẩm
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Quần áo anime</a></li>
-                                <li><a class="dropdown-item" href="#">Phụ Kiện Anime</a></li>
-                                <li><a class="dropdown-item" href="#">Sách</a></li>
+                            <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/figure.php">Mô hình</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/clothes.php">Áo - Trang Phục</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/BaloAndMore.php">Balo dụng cụ học tập</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/keychain.php">Móc Khóa Huy Hiệu</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/Accessories.php">Trang sức</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/watch.php">Đồng Hồ</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/Comingsoon.php">Gối Thú Nhồi Bông</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/Comingsoon.php">In Sản Phẩm Theo Yêu Cầu</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">

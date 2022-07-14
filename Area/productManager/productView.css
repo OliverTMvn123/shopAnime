@@ -22,5 +22,10 @@
 .listproduct{
     height: 90%;
     padding:10px 50px;
-    overflow: scroll;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y:scroll;
+}
+.khung{
+    margin:10px 10px;
 }

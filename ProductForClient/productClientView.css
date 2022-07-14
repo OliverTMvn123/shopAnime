@@ -28,3 +28,37 @@
 .btnProduct button{
     border-radius: 30px;
 }
+.selectPage{
+    height: 200px;
+    max-height: 200px;  
+    text-align: center;
+    
+}
+#selectPage{
+    padding : 80px 300px;
+}
+.page{
+    width: 400px;
+    justify-content: center;
+}
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+  }

@@ -108,32 +108,39 @@
             </div>        
             <div class="col-9" id='selectCP'>
                   <h1 align="center"> Danh Sách Sản Phẩm</h1>
-                  <hr>  
-                  <div class="listproduct">
-                  <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th align="center">Tên Loại Sản Phẩm</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                               require '../../ConnectDB.php';
-                               $sql='SELECT * FROM `category`';
-                               $resuft=$conn->query($sql);
-                               while($row=$resuft->fetch_assoc())
-                               {
-                                echo("<tr>
-                                        <th>".$row['ID']."</th>
-                                        <th >".$row['nameCategory']."</th>
-                                    </tr>");
-                               }             
-                            ?>
-                        </tbody>
-                    </table>
+                  <hr> 
+                <div class="khung">
+                    <div class="listproduct">
+                    <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th align="center">Tên Loại Sản Phẩm</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                require '../../ConnectDB.php';
+                                $sql='SELECT * FROM `category`';
+                                $resuft=$conn->query($sql);
+                                while($row=$resuft->fetch_assoc())
+                                {
+                                    echo("<tr>
+                                            <th>".$row['ID']."</th>
+                                            <th >".$row['nameCategory']."</th>
+                                        </tr>");
+                                }             
+                                ?>
+                            </tbody>
+                        </table>
+                        <div class="clear"></div>
+                    
                   </div>
+                </div>  
+                  <br>
+                  <br>
             </div>
+           
         </div>
         <div class="clear">
         </div>

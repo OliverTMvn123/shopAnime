@@ -155,17 +155,19 @@
                 $sql1='SELECT COUNT(*) FROM `product` WHERE `nameCategory`= "Quần Áo Cosplay" ORDER BY ID DESC';
                 $resuft1= $conn->query($sql1);
                 $countList= $resuft1->fetch_assoc();
+                $i=1;
                 if($countList['COUNT(*)']!=0)
                 {
                     $sql='SELECT * FROM `product` WHERE `nameCategory`= "Quần Áo Cosplay" ORDER BY ID DESC';
                     $resuft= $conn->query($sql);
-                    $i=0;
+                    $id=$_GET['id'];
+                    $i=$i*$id;
                     while($row=$resuft->fetch_assoc())
                     {
-                        /*if($i==8)
+                        if($i==($id+16))
                         {
                           break;
-                        }*/
+                        }
                       echo(' <div class="col-3 divProduct">
                                 <img src="/Area/productManager/uploads/'.$row['image'].'" class="imageProduct" alt="">
                                 <div class="infor">
@@ -180,17 +182,57 @@
                                         <button> Thêm vào giỏ hàng</button>
                                     </div>
                                 </div>
-                            </div>');
+                            </div>
+                            ');
                   $i++;
-                 
                     }
-                }
+                    $tam =$countList['COUNT(*)'] /16;
+                 
+                    if(isset($_GET['id']))
+                    {
+                        $i=$i*$id;
+                        $id=$_GET['id'];
+                        echo('
+                        <div class="selectPage" id="selectPage">
+                            <div class="pagination page">
+                            <form action="" method="get">
+                            <a href="/ProductForClient/SelectByCategory/clothes.php?id='.($id-1).'">&laquo;</a>');
+                            
+                            for($j=$id;$j<4;$j++)
+                            {
+                                echo(' <a href="/ProductForClient/SelectByCategory/clothes.php?id='.$j.'" type="submit" name="id">'.$j.'</a>
+                                ');
+                            }
+                            echo(' <a href="#">&raquo;</a>
+                            </form>
+                            </div>
+                        </div>');
+                    }
+                    else{
+                        echo('
+                            <div class="selectPage" id="selectPage">
+                                <div class="pagination page">
+                                <form action="" method="get">
+                                <a href="#">&laquo;</a>');
+                                for($j=1;$j<$tam+1;$j++)
+                                {
+                                    echo(' <a href="/ProductForClient/SelectByCategory/clothes.php?id='.$j.'" type="submit" name="id">'.$j.'</a>
+                                    ');
+                                }
+                                echo(' <a href="#">&raquo;</a>
+                                </form>
+                                </div>
+                            </div>');
+                    }
+                    
+                    }
                 else{
                     echo("<h1 style='color:red; text-align:center; margin-top:50px'> KHÔNG CÓ SẢN PHẨM NÀO Ở ĐÂY </h1> <img src='/image/iconMenu.png'  width='300px' height='700'>");
                  }
                 
                ?>
-                </div>                     
+                </div>   
+                                        
             </div>
         </div>
         
