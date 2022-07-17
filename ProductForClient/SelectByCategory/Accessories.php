@@ -55,21 +55,21 @@
                                 Sản phẩm
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="./figure.php">Mô hình</a></li>
+                                <li><a class="dropdown-item" href="./figure.php?id=0">Mô hình</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./clothes.php">Áo - Trang Phục</a></li>
+                                <li><a class="dropdown-item" href="./clothes.php?id=0">Áo - Trang Phục</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./BaloAndMore.php">Balo dụng cụ học tập</a></li>
+                                <li><a class="dropdown-item" href="./BaloAndMore.php?id=0">Balo dụng cụ học tập</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./keychain.php">Móc Khóa Huy Hiệu</a></li>
+                                <li><a class="dropdown-item" href="./keychain.php?id=0">Móc Khóa Huy Hiệu</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./Accessories.php">Trang sức</a></li>
+                                <li><a class="dropdown-item" href="./Accessories.php?id=0">Trang sức</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./watch.php">Đồng Hồ</a></li>
+                                <li><a class="dropdown-item" href="./watch.php?id=0">Đồng Hồ</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./Comingsoon.php">Gối Thú Nhồi Bông</a></li>
+                                <li><a class="dropdown-item" href="./Comingsoon.php?id=0">Gối Thú Nhồi Bông</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./Comingsoon.php">In Sản Phẩm Theo Yêu Cầu</a></li>
+                                <li><a class="dropdown-item" href="./Comingsoon.php?id=0">In Sản Phẩm Theo Yêu Cầu</a></li>
 
                             </ul>
                         </li>
@@ -124,25 +124,25 @@
             <div class="col-2" id="leftmenu">
                 <ul id="listmenu">
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon1.png?v=245"
-                            alt=""> <a href="./figure.php" target="_top">Mô hình</a></li>
+                            alt=""> <a href="./figure.php?id=0" target="_top">Mô hình</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon2.png?v=245"
-                            alt=""><a href="./clothes.php" target="_top"> Áo - Trang Phục</a></li>
+                            alt=""><a href="./clothes.php?id=0" target="_top"> Áo - Trang Phục</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon3.png?v=245"
-                            alt=""><a href="./BaloAndMore.php" target="_top"> Balo dụng cụ học tập</a></li>
+                            alt=""><a href="./BaloAndMore.php?id=0" target="_top"> Balo dụng cụ học tập</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon4.png?v=245"
-                            alt=""><a href="./keychain.php" target="_top"> Móc Khóa Huy Hiệu</a></li>
+                            alt=""><a href="./keychain.php?id=0" target="_top"> Móc Khóa Huy Hiệu</a></li>
                     <li> <img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon5.png?v=245"
-                            alt=""><a href="./Accessories.php" target="_top"> Trang sức</a></li>
+                            alt=""><a href="./Accessories.php?id=0" target="_top"> Trang sức</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon6.png?v=245"
-                            alt=""> <a href="./watch.php" target="_top"> Đồng Hồ</a></li>
+                            alt=""> <a href="./watch.php?id=0" target="_top"> Đồng Hồ</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon7.png?v=245"
-                            alt=""><a href="./Comingsoon.php" target="_top"> Phụ Kiện Đầu</a> </li>
+                            alt=""><a href="./Comingsoon.php?id=0" target="_top"> Phụ Kiện Đầu</a> </li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon8.png?v=245"
-                            alt=""><a href="./Comingsoon.php" target="_top"> Gối Thú Nhồi Bông</a></li>
+                            alt=""><a href="./Comingsoon.php?id=0" target="_top"> Gối Thú Nhồi Bông</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon9.png?v=245"
-                            alt=""><a href="./Comingsoon.php" target="_top"> In Sản Phẩm Theo Yêu Cầu</a></li>
+                            alt=""><a href="./Comingsoon.php?id=0" target="_top"> In Sản Phẩm Theo Yêu Cầu</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon10.png?v=245"
-                            alt=""><a href="./Comingsoon.php" target="_top"> Phụ Kiện Khác</a></li>
+                            alt=""><a href="./Comingsoon.php?id=0" target="_top"> Phụ Kiện Khác</a></li>
                 </ul>
 
             </div>
@@ -158,48 +158,115 @@
                 if($countList['COUNT(*)']!=0)
                 {
                     $sql='SELECT * FROM `product` WHERE `nameCategory`= "Trang Sức" ORDER BY ID DESC';
+                    if(isset($_GET['id']))
+                    {
+                        $check=$_GET['id'];
+                    }
+                    else{
+                        $i=0;
+                        $check=1;
+                    }
                     $resuft= $conn->query($sql);
-                    $i=0;
+                    $count=0;
+                    $list1;
                     while($row=$resuft->fetch_assoc())
                     {
-                        if($i==16)
+                        $list = array($row['ID'],$row['image'],$row['nameProduct'],$row['Price']);
+                        $list1[$count]=$list;
+                        $count++;
+                    }
+                    
+                    $flag=0;$list2=null;
+                    $saveLocation=0;
+                    while($list1)
+                    {
+                        $listProduct=null;
+                        for($j=$check*16;$j<count($list1);$j++)
                         {
-                          break;
+                            
+                            if($j== ($check*16)+16 || $list1[$j]==null)
+                            {
+                                break;
+                            }
+                            $listProduct[$j]=$list1[$j];
+                            $saveLocation++;
+                            
                         }
-                      echo(' <div class="col-3 divProduct">
-                                <img src="/Area/productManager/uploads/'.$row['image'].'" class="imageProduct" alt="">
+                        if($listProduct!=null)
+                        {
+                            $list2[$flag]=$listProduct;
+                        }
+                        $flag++;
+                        break;
+                    }
+                    if($list2!=null)
+                        {
+                        for($k=0;$k<count($list2[0]);$k++)
+                        {
+                            
+                            echo(' <div class="col-3 divProduct">
+                                <img src="/Area/productManager/uploads/'.$list2[0][$k+($check*16)][1].'" class="imageProduct" alt="">
                                 <div class="infor">
                                     <div class="name">
-                                        <h5>'.$row['nameProduct'].'</h5>
+                                        <h5>'.$list2[0][$k+($check*16)][2].'</h5>
                                     </div>
                                     <div class="Price">
-                                    <h3 style="color:red">'.$row['Price'].'$</h3>   
+                                    <h3 style="color:red">'.$list2[0][$k+($check*16)][3].'$</h3>   
                                     </div>
                                     <div class="btnProduct">
                                         <button width="10px"><img src="/image/searchIcon.png" width="15px" alt=""></button>
                                         <button> Thêm vào giỏ hàng</button>
                                     </div>
                                 </div>
-                            </div>
-                            ');
-                  $i++;
+                                </div>');
+                        }
                     }
+
+                   
                     $tam =$countList['COUNT(*)'] /16;
-                    
+                 
                     if(isset($_GET['id']))
                     {
+                        
                         $id=$_GET['id'];
                         echo('
                         <div class="selectPage" id="selectPage">
                             <div class="pagination page">
                             <form action="" method="get">
-                            <a href="/ProductForClient/SelectByCategory/clothes.php?id='.($id-1).'">&laquo;</a>');
+                            <a href="/ProductForClient/SelectByCategory/Accessories.php?id='.($id-1).'">&laquo;</a>');
                             
-                            for($j=$id;$j<4;$j++)
-                            {
-                                echo(' <a href="/ProductForClient/SelectByCategory/clothes.php?id='.$j.'" type="submit" name="id">'.$j.'</a>
-                                ');
-                            }
+                            if($tam-$check!=0)
+                                {  
+                                    if($check==0) {
+                                        $tam1=0;$tam2=1;$tam3=2;
+                                        echo(' <a href="/ProductForClient/SelectByCategory/Accessories.php?id='.$tam1.'" type="submit" name="id">'.$tam1.'</a>
+                                        ');
+                                        echo(' <a href="/ProductForClient/SelectByCategory/Accessories.php?id='.$tam2.'" type="submit" name="id">'.$tam2.'</a>
+                                        '); 
+                                        echo(' <a href="/ProductForClient/SelectByCategory/Accessories.php?id='.$tam3.'" type="submit" name="id">'.$tam3.'</a>
+                                        ');
+                                    }
+                                    else{
+                                        $page1=$check-1;
+                                        $page2= $check+1;
+                                        echo(' <a href="/ProductForClient/SelectByCategory/Accessories.php?id='.$page1.'" type="submit" name="id">'.$page1.'</a>
+                                        ');
+                                        echo(' <a href="/ProductForClient/SelectByCategory/Accessories.php?id='.$check.'" type="submit" name="id">'.$check.'</a>
+                                        '); 
+                                        echo(' <a href="/ProductForClient/SelectByCategory/Accessories.php?id='.$page2.'" type="submit" name="id">'.$page2.'</a>
+                                        ');
+                                    }
+                                    
+                                }
+                            else{
+                                $tam1=$check-2;$tam2=$check-1;$tam3=$check;
+                                        echo(' <a href="/ProductForClient/SelectByCategory/Accessories.php?id='.$tam1.'" type="submit" name="id">'.$tam1.'</a>
+                                        ');
+                                        echo(' <a href="/ProductForClient/SelectByCategory/Accessories.php?id='.$tam2.'" type="submit" name="id">'.$tam2.'</a>
+                                        '); 
+                                        echo(' <a href="/ProductForClient/SelectByCategory/Accessories.php?id='.$tam3.'" type="submit" name="id">'.$tam3.'</a>
+                                        ');
+                            }    
                             echo(' <a href="#">&raquo;</a>
                             </form>
                             </div>
@@ -211,11 +278,13 @@
                                 <div class="pagination page">
                                 <form action="" method="get">
                                 <a href="#">&laquo;</a>');
-                                for($j=1;$j<$tam+1;$j++)
-                                {
-                                    echo(' <a href="/ProductForClient/SelectByCategory/clothes.php?id='.$j.'" type="submit" name="id">'.$j.'</a>
-                                    ');
-                                }
+                                $tam1=0;$tam2=1;$tam3=2;
+                                echo(' <a href="/ProductForClient/SelectByCategory/Accessories.php?id='.$tam1.'" type="submit" name="id">'.$tam1.'</a>
+                                ');
+                                echo(' <a href="/ProductForClient/SelectByCategory/Accessories.php?id='.$tam2.'" type="submit" name="id">'.$tam2.'</a>
+                                '); 
+                                echo(' <a href="/ProductForClient/SelectByCategory/Accessories.php?id='.$tam3.'" type="submit" name="id">'.$tam3.'</a>
+                                ');
                                 echo(' <a href="#">&raquo;</a>
                                 </form>
                                 </div>
@@ -226,7 +295,6 @@
                 else{
                     echo("<h1 style='color:red; text-align:center; margin-top:50px'> KHÔNG CÓ SẢN PHẨM NÀO Ở ĐÂY </h1> <img src='/image/iconMenu.png'  width='300px' height='700'>");
                  }
-                
                ?>
                 </div>                     
             </div>

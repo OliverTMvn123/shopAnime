@@ -55,21 +55,21 @@
                                 Sản phẩm
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="./figure.php">Mô hình</a></li>
+                            <li><a class="dropdown-item" href="./figure.php?id=0">Mô hình</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./clothes.php">Áo - Trang Phục</a></li>
+                                <li><a class="dropdown-item" href="./clothes.php?id=0">Áo - Trang Phục</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./BaloAndMore.php">Balo dụng cụ học tập</a></li>
+                                <li><a class="dropdown-item" href="./BaloAndMore.php?id=0">Balo dụng cụ học tập</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./keychain.php">Móc Khóa Huy Hiệu</a></li>
+                                <li><a class="dropdown-item" href="./keychain.php?id=0">Móc Khóa Huy Hiệu</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./Accessories.php">Trang sức</a></li>
+                                <li><a class="dropdown-item" href="./Accessories.php?id=0">Trang sức</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./watch.php">Đồng Hồ</a></li>
+                                <li><a class="dropdown-item" href="./watch.php?id=0">Đồng Hồ</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./Comingsoon.php">Gối Thú Nhồi Bông</a></li>
+                                <li><a class="dropdown-item" href="./Comingsoon.php?id=0">Gối Thú Nhồi Bông</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./Comingsoon.php">In Sản Phẩm Theo Yêu Cầu</a></li>
+                                <li><a class="dropdown-item" href="./Comingsoon.php?id=0">In Sản Phẩm Theo Yêu Cầu</a></li>
 
                             </ul>
                         </li>
@@ -123,26 +123,26 @@
         <div class="row">
             <div class="col-2" id="leftmenu">
                 <ul id="listmenu">
-                    <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon1.png?v=245"
-                            alt=""> <a href="./figure.php" target="_top">Mô hình</a></li>
+                <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon1.png?v=245"
+                            alt=""> <a href="./figure.php?id=0" target="_top">Mô hình</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon2.png?v=245"
-                            alt=""><a href="./clothes.php" target="_top"> Áo - Trang Phục</a></li>
+                            alt=""><a href="./clothes.php?id=0" target="_top"> Áo - Trang Phục</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon3.png?v=245"
-                            alt=""><a href="./BaloAndMore.php" target="_top"> Balo dụng cụ học tập</a></li>
+                            alt=""><a href="./BaloAndMore.php?id=0" target="_top"> Balo dụng cụ học tập</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon4.png?v=245"
-                            alt=""><a href="./keychain.php" target="_top"> Móc Khóa Huy Hiệu</a></li>
+                            alt=""><a href="./keychain.php?id=0" target="_top"> Móc Khóa Huy Hiệu</a></li>
                     <li> <img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon5.png?v=245"
-                            alt=""><a href="./Accessories.php" target="_top"> Trang sức</a></li>
+                            alt=""><a href="./Accessories.php?id=0" target="_top"> Trang sức</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon6.png?v=245"
-                            alt=""> <a href="./watch.php" target="_top"> Đồng Hồ</a></li>
+                            alt=""> <a href="./watch.php?id=0" target="_top"> Đồng Hồ</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon7.png?v=245"
-                            alt=""><a href="./Comingsoon.php" target="_top"> Phụ Kiện Đầu</a> </li>
+                            alt=""><a href="./Comingsoon.php?id=0" target="_top"> Phụ Kiện Đầu</a> </li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon8.png?v=245"
-                            alt=""><a href="./Comingsoon.php" target="_top"> Gối Thú Nhồi Bông</a></li>
+                            alt=""><a href="./Comingsoon.php?id=0" target="_top"> Gối Thú Nhồi Bông</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon9.png?v=245"
-                            alt=""><a href="./Comingsoon.php" target="_top"> In Sản Phẩm Theo Yêu Cầu</a></li>
+                            alt=""><a href="./Comingsoon.php?id=0" target="_top"> In Sản Phẩm Theo Yêu Cầu</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon10.png?v=245"
-                            alt=""><a href="./Comingsoon.php" target="_top"> Phụ Kiện Khác</a></li>
+                            alt=""><a href="./Comingsoon.php?id=0" target="_top"> Phụ Kiện Khác</a></li>
                 </ul>
 
             </div>

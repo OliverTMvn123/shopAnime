@@ -1,4 +1,5 @@
 
+
 function visiableText(){
     document.getElementById("SayHi").style.visibility='inherit';
     let count = 0;
@@ -11,4 +12,6 @@ function visiableText(){
          }
        }, 300);
 }
-
+function detailt(){
+    alert("dơpakdoawkdpoad");
+ }
