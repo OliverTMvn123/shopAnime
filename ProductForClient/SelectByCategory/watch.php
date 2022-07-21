@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../productClientView.css">
     <script src="/homepage/index.js"></script>
     <script src="/USER/signup/signup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +28,9 @@
                 document.documentElement.scrollTop = 0;
             }
         </script>
+    </div>
+    <div id="detailItem" >
+            
     </div>
     <div class="ImageGirl">
         <h5 id="SayHi" style="color:white;width: 100px; visibility:hidden;">Hi
@@ -213,7 +217,7 @@
                                     <h3 style="color:red">'.$list2[0][$k+($check*16)][3].'$</h3>   
                                     </div>
                                     <div class="btnProduct">
-                                        <button width="10px"><img src="/image/searchIcon.png" width="15px" alt=""></button>
+                                        <button width="10px" onClick="detailt1('.$list2[0][$k+($check*16)][0].')" type="submit"><img src="/image/searchIcon.png" width="15px" alt=""></button>
                                         <button> Thêm vào giỏ hàng</button>
                                     </div>
                                 </div>

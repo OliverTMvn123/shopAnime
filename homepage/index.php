@@ -10,7 +10,8 @@
     <script src="../USER/signup/signup.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">    
     <title>AnimeShop
@@ -26,6 +27,9 @@
                 document.documentElement.scrollTop = 0;
             }
         </script>
+    </div>
+    <div id="detailItem" >
+            
     </div>
     <div class="ImageGirl">
         <h5 id="SayHi" style="color:white;width: 100px; visibility:hidden;">Hi
@@ -176,7 +180,7 @@
                       <h4 class="nameItem">'.$row['nameProduct'].'</h4>
                       <h3 class="price" style="color:red">'.$row['Price'].'$</h3>
                       <div class="btnNewItem">
-                        <button width="10px"><img src="/image/searchIcon.png" width="15px" alt=""></button>
+                        <button width="10px" onClick="detailt('.$row['ID'].')" type="submit"><img src="/image/searchIcon.png" width="15px" alt=""></button>
                         <button> Thêm vào giỏ hàng</button>
                       </div>
                           
@@ -197,20 +201,6 @@
                 </div>
                 <div class="col-9 controlBar">
                     <button class="btn btn-outline-success" style="margin-left:5px;"  onClick="chuyenhuong1()" type="submit">Xem Thêm</button>
-                    <script>
-                        function chuyenhuong1(){
-                                location='/ProductForClient/SelectByCategory/figure.php?id=0';
-                        }
-                        function chuyenhuong2(){
-                                location='/ProductForClient/SelectByCategory/clothes.php?id=0';
-                        }
-                        function chuyenhuong3(){
-                                location='/ProductForClient/SelectByCategory/BaloAndMore.php?id=0';
-                        }function chuyenhuong4(){
-                                location='/ProductForClient/productClientView.php?id=0';
-                        }
-                    </script>
-
                 </div>
             </div>
             <div class="row">
@@ -227,7 +217,7 @@
                                             <div class="col-7">
                                                 <h5>'.$row['nameProduct'].'</h4>
                                                     <h4 style="color:red">'.$row['Price'].'$</h3>
-                                                        <button width="8px" onClick="detailt()" type="submit"><img src="/image/searchIcon.png" width="15px" alt=""></button>
+                                                        <button width="8px" onClick="detailt('.$row['ID'].')" type="submit"><img src="/image/searchIcon.png" width="15px" alt=""></button>
                                                         <button type="submit"> Thêm vào giỏ hàng</button>
                                             </div>
                                             <div class="col-5"><img src="/Area/productManager/uploads/'.$row['image'].'" width="194" height="128" alt=""></div>
@@ -252,7 +242,7 @@
                                         <div class="col-7">
                                             <h5>'.$row['nameProduct'].'</h4>
                                                 <h4 style="color:red">'.$row['Price'].'$</h3>
-                                                    <button width="8px"><img src="/image/searchIcon.png" width="15px"
+                                                    <button width="8px" onClick="detailt('.$row['ID'].')" type="submit"><img src="/image/searchIcon.png" width="15px"
                                                             alt=""></button>
                                                     <button> Thêm vào giỏ hàng</button>
                                         </div>
@@ -293,7 +283,7 @@
                                             <div class="col-7">
                                                 <h5>'.$row['nameProduct'].'</h4>
                                                     <h4 style="color:red">'.$row['Price'].'$</h3>
-                                                        <button width="8px"><img src="/image/searchIcon.png" width="15px"
+                                                        <button width="8px" onClick="detailt('.$row['ID'].')" type="submit"><img src="/image/searchIcon.png" width="15px"
                                                                 alt=""></button>
                                                         <button> Thêm vào giỏ hàng</button>
                                             </div>
@@ -319,7 +309,7 @@
                                         <div class="col-7">
                                             <h5>'.$row['nameProduct'].'</h4>
                                                 <h4 style="color:red">'.$row['Price'].' $</h3>
-                                                    <button width="8px"><img src="/image/searchIcon.png" width="15px"
+                                                    <button width="8px" onClick="detailt('.$row['ID'].')" type="submit"><img src="/image/searchIcon.png" width="15px"
                                                             alt=""></button>
                                                     <button> Thêm vào giỏ hàng</button>
                                         </div>
@@ -358,7 +348,7 @@
                                             <div class="col-7">
                                                 <h5>'.$row['nameProduct'].'</h4>
                                                     <h4 style="color:red">'.$row['Price'].'$</h3>
-                                                        <button width="8px"><img src="/image/searchIcon.png" width="15px"
+                                                        <button width="8px" onClick="detailt('.$row['ID'].')" type="submit"><img src="/image/searchIcon.png" width="15px"
                                                                 alt=""></button>
                                                         <button> Thêm vào giỏ hàng</button>
                                             </div>
@@ -384,7 +374,7 @@
                                         <div class="col-7">
                                             <h5>'.$row['nameProduct'].'</h4>
                                                 <h4 style="color:red">'.$row['Price'].'$</h3>
-                                                    <button width="8px"><img src="/image/searchIcon.png" width="15px"
+                                                    <button width="8px" onClick="detailt('.$row['ID'].')" type="submit"><img src="/image/searchIcon.png" width="15px"
                                                             alt=""></button>
                                                     <button> Thêm vào giỏ hàng</button>
                                         </div>

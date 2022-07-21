@@ -214,7 +214,7 @@
                                     <h3 style="color:red">'.$list2[0][$k+($check*16)][3].'$</h3>   
                                     </div>
                                     <div class="btnProduct">
-                                        <button width="10px"><img src="/image/searchIcon.png" width="15px" alt=""></button>
+                                        <button width="10px" onClick="detailt('.$row['ID'].')" type="submit"><img src="/image/searchIcon.png" width="15px" alt=""></button>
                                         <button> Thêm vào giỏ hàng</button>
                                     </div>
                                 </div>
