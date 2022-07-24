@@ -80,11 +80,10 @@
                             <a class="nav-link active" aria-current="page" href="#">Hướng Dẫn Mua Hàng </a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <form action='/ProductForClient/searchView.php' class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" name='search' aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
-
                     <div class="User">
                         <form id="btnLogout" action="/USER/logout/logout.php" method="post" style="display:none">
                             <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng

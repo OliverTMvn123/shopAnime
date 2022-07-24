@@ -80,8 +80,8 @@
                             <a class="nav-link active" aria-current="page" href="#">Hướng Dẫn Mua Hàng </a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <form action='/ProductForClient/searchView.php' class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" name='search' aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
 
@@ -171,47 +171,15 @@
                     $list1;
                     while($row=$resuft->fetch_assoc())
                     {
-                        $list = array($row['ID'],$row['image'],$row['nameProduct'],$row['Price']);
-                        $list1[$count]=$list;
-                        $count++;
-                    }
-                    
-                    $flag=0;$list2=null;
-                    $saveLocation=0;
-                    while($list1)
-                    {
-                        $listProduct=null;
-                        for($j=$check*16;$j<count($list1);$j++)
-                        {
-                            
-                            if($j== ($check*16)+16 || $list1[$j]==null)
-                            {
-                                break;
-                            }
-                            $listProduct[$j]=$list1[$j];
-                            $saveLocation++;
-                            
-                        }
-                        if($listProduct!=null)
-                        {
-                            $list2[$flag]=$listProduct;
-                        }
-                        $flag++;
-                        break;
-                    }
-                    if($list2!=null)
-                        {
-                        for($k=0;$k<count($list2[0]);$k++)
-                        {
                             
                             echo(' <div class="col-3 divProduct">
-                                <img src="/Area/productManager/uploads/'.$list2[0][$k+($check*16)][1].'" class="imageProduct" alt="">
+                                <img src="/Area/productManager/uploads/'.$row['image'].'" class="imageProduct" alt="">
                                 <div class="infor">
                                     <div class="name">
-                                        <h5>'.$list2[0][$k+($check*16)][2].'</h5>
+                                        <h5>'.$row['nameProduct'].'</h5>
                                     </div>
                                     <div class="Price">
-                                    <h3 style="color:red">'.$list2[0][$k+($check*16)][3].'$</h3>   
+                                    <h3 style="color:red">'.$row['Price'].'$</h3>   
                                     </div>
                                     <div class="btnProduct">
                                         <button width="10px" onClick="detailt('.$row['ID'].')" type="submit"><img src="/image/searchIcon.png" width="15px" alt=""></button>
@@ -220,76 +188,6 @@
                                 </div>
                                 </div>');
                         }
-                    }
-
-                   
-                    $tam =$countList['COUNT(*)'] /16;
-                  
-                    if(isset($_GET['id']))
-                    {
-                        $id=$_GET['id'];
-                        echo('
-                        <div class="selectPage" id="selectPage">
-                            <div class="pagination page">
-                            <form action="" method="get">
-                            <a href="/ProductForClient/productClientView.php?id='.($id-1).'">&laquo;</a>');
-                            
-                            if($tam-$check!=0 && $tam-$check>0)
-                                {  
-                                    if($check==0) {
-                                        $tam1=0;$tam2=1;$tam3=2;
-                                        echo(' <a href="/ProductForClient/productClientView.php?id='.$tam1.'" type="submit" name="id">'.$tam1.'</a>
-                                        ');
-                                        echo(' <a href="/ProductForClient/productClientView.php?id='.$tam2.'" type="submit" name="id">'.$tam2.'</a>
-                                        '); 
-                                        echo(' <a href="/ProductForClient/productClientView.php?id='.$tam3.'" type="submit" name="id">'.$tam3.'</a>
-                                        ');
-                                    }
-                                    else{
-                                        $page1=$check-1;
-                                        $page2= $check+1;
-                                        echo(' <a href="/ProductForClient/productClientView.php?id='.$page1.'" type="submit" name="id">'.$page1.'</a>
-                                        ');
-                                        echo(' <a href="/ProductForClient/productClientView.php?id='.$check.'" type="submit" name="id">'.$check.'</a>
-                                        '); 
-                                        echo(' <a href="/ProductForClient/productClientView.php?id='.$page2.'" type="submit" name="id">'.$page2.'</a>
-                                        ');
-                                    }
-                                    
-                                }
-                            else{
-                                $tam1=$check-2;$tam2=$check-1;$tam3=$check;
-                                        echo(' <a href="/ProductForClient/productClientView.php?id='.$tam1.'" type="submit" name="id">'.$tam1.'</a>
-                                        ');
-                                        echo(' <a href="/ProductForClient/productClientView.php?id='.$tam2.'" type="submit" name="id">'.$tam2.'</a>
-                                        '); 
-                                        echo(' <a href="/ProductForClient/productClientView.php?id='.$tam3.'" type="submit" name="id">'.$tam3.'</a>
-                                        ');
-                            }    
-                            echo(' <a href="#">&raquo;</a>
-                            </form>
-                            </div>
-                        </div>');
-                    }
-                    else{
-                        echo('
-                            <div class="selectPage" id="selectPage">
-                                <div class="pagination page">
-                                <form action="" method="get">
-                                <a href="#">&laquo;</a>');
-                                $tam1=0;$tam2=1;$tam3=2;
-                                echo(' <a href="/ProductForClient/productClientView.php?id='.$tam1.'" type="submit" name="id">'.$tam1.'</a>
-                                ');
-                                echo(' <a href="/ProductForClient/productClientView.php?id='.$tam2.'" type="submit" name="id">'.$tam2.'</a>
-                                '); 
-                                echo(' <a href="/ProductForClient/productClientView.php?id='.$tam3.'" type="submit" name="id">'.$tam3.'</a>
-                                ');
-                                echo(' <a href="#">&raquo;</a>
-                                </form>
-                                </div>
-                            </div>');
-                    }
-                    
                     }
                 else{
                     echo("<h1 style='color:red; text-align:center; margin-top:50px'> KHÔNG CÓ SẢN PHẨM NÀO Ở ĐÂY </h1> <img src='/image/iconMenu.png'  width='300px' height='700'>");

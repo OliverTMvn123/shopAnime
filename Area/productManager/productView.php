@@ -74,8 +74,8 @@
                             <a class="nav-link active" aria-current="page" href="#">Hướng Dẫn Mua Hàng </a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <form action='/ProductForClient/searchView.php' class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" name='search' aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                   
@@ -129,7 +129,8 @@
                             <th>Tên Sản Phẩm</th>
                             <th>Loại Sản Phẩm</th>
                             <th>Giá Bán</th>
-                            <th>Hình Ảnh
+                            <th>Hình Ảnh</th>
+                            <th>Thao Tác</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -149,6 +150,12 @@
                                         <th>
                                             <img src='uploads/".$image."' alt='' width='60' height='60'>
                                         </th>
+                                        <th>
+                                        <form action='repairProductView.php' method='get'>
+                                        <input type='text' class='hidden' name='id' value='".$row['ID']."'></input>
+                                            <button type='submit' class='btn btn-success'>sửa</button>
+                                        </form>    
+                                            </th>
                                     </tr>");
                                }             
                             ?>

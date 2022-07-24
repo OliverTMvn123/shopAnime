@@ -19,7 +19,7 @@
     text-align: center;
 }
 .name {
-    padding-top:10%;
+    padding-top:20%;
     height: 50%;
 }
 .Price {
@@ -27,6 +27,7 @@
 }
 .btnProduct button{
     border-radius: 30px;
+    border: 1px solid rgb(150, 150, 150,0.7);
 }
 .selectPage{
     height: 200px;
