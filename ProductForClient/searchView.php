@@ -156,6 +156,7 @@
                 $sql1='SELECT COUNT(*) FROM `product` WHERE `nameProduct`="'.$searchKey.'"' ;
                 $resuft1= $conn->query($sql1);
                 $countList= $resuft1->fetch_assoc();
+                echo("<h3> Kết Quả Tìm Kiếm Cho: ".$searchKey."</h3>");
                 if($countList['COUNT(*)']!=0)
                 {
                   
@@ -184,7 +185,7 @@
                         }
                     }
                 else{
-                    echo("<h1 style='color:red; text-align:center; margin-top:50px'> KHÔNG CÓ SẢN PHẨM NÀO Ở ĐÂY </h1> <img src='/image/iconMenu.png'  width='300px' height='700'>");
+                    echo("<h1 style='color:red; text-align:center; margin-top:50px'> KHÔNG TÌM THẤY SẢN PHẨM NÀO GIỐNG VỚI BẠN TÌM KIẾM Ở ĐÂY </h1> <img src='/image/iconMenu.png'  width='300px' height='700'>");
                  }
                 
                ?>
