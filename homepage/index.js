@@ -1,5 +1,4 @@
 
-
 function visiableText(){
     document.getElementById("SayHi").style.visibility='inherit';
     let count = 0;
@@ -32,10 +31,21 @@ function detailt1(i){
     })    
 
 }
+function addtoCart(id){
+     console.log(document.cookie);
+    // var a = getCookie("CART").split(",");
+    // document.cookie = "CART="+a+";";
+    //document.cookie = 'tam=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    $(document).ready(function(){
+        $.get("./setup/addItemtoCart.php",{id1:id},function(data){
+            $("numberCart").html(data)
+        });
+    })
+}
 function closedetailItem(){
     document.getElementById('detailItem').setAttribute("style","display:none");
 }
- function chuyenhuong1(){
+function chuyenhuong1(){
     location='/ProductForClient/SelectByCategory/figure.php?id=0';
 }
 function chuyenhuong2(){

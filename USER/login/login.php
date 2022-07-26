@@ -6,16 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/homepage/index.css">
+    <link rel='icon' href='/image/iconMenu.png' type='image/x-icon'> </link>
     <script src="/homepage/index.js"></script>
+    <script src="/USER/signup/signup.js"></script>
     <link rel="stylesheet" href="../signup/signup.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>AnimeShop</title>
 </head>
 
 <body class="bg-dark">
-    <div class="top">
-        <img src="/image/topicon.png" width="60px" onclick="hello()" alt="">
+<div class="top">
+        <img src="/image/topicon1.png" width="60px" onclick="hello()" alt="">
         <script>
             function hello() {
                 document.body.scrollTop = 0;
@@ -23,15 +26,20 @@
             }
         </script>
     </div>
+    <div id="detailItem" >
+            
+            </div>
     <div class="ImageGirl">
-        <h5 id="SayHi" style="color:white; visibility:hidden;">Hi <?php $user1=$_COOKIE['user1'];  echo("".$user1) ?></h5> 
-        <a onClick="visiableText()"><img id="headGirl" src="/image/head.png"  width="100px"  alt=""></a>
+        <h5 id="SayHi" style="color:white;width: 100px; visibility:hidden;">Hi
+            <?php $user1=$_COOKIE['user1'];  echo("".$user1) ?>
+        </h5>
+        <a onClick="visiableText()"><img id="headGirl" src="/image/head.png" width="100px" alt=""></a>
     </div>
+
     <div class="menu">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/homepage/index.php"><img id="iconMenu" src="/image/iconMenu.png"
-                        alt=""></a>
+                <a class="navbar-brand" href="/homepage/index.php"><img id="iconMenu" src="/image/iconMenu.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -48,9 +56,22 @@
                                 Sản phẩm
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Quần áo anime</a></li>
-                                <li><a class="dropdown-item" href="#">Phụ Kiện Anime</a></li>
-                                <li><a class="dropdown-item" href="#">Sách</a></li>
+                            <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/figure.php?id=0">Mô hình</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/clothes.php?id=0">Áo - Trang Phục</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/BaloAndMore.php?id=0">Balo dụng cụ học tập</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/keychain.php?id=0">Móc Khóa Huy Hiệu</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/Accessories.php?id=0">Trang sức</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/watch.php?id=0">Đồng Hồ</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/Comingsoon.php?id=0">Gối Thú Nhồi Bông</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/Comingsoon.php?id=0">In Sản Phẩm Theo Yêu Cầu</a></li>
+
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -60,37 +81,42 @@
                             <a class="nav-link active" aria-current="page" href="#">Hướng Dẫn Mua Hàng </a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <form action='/ProductForClient/searchView.php' class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" name='search' aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
-                  
+
                     <div class="User">
                         <form id="btnLogout" action="/USER/logout/logout.php" method="post" style="display:none">
-                            <button  class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng Xuất</button>
+                            <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng
+                                Xuất</button>
                         </form>
                         <form id="btnLogin" action="/USER/login/login.php">
-                            <button  class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng Nhập</button>
+                            <button class="btn btn-outline-success" style="margin-left:5px; " type="submit">Đăng
+                                Nhập</button>
                         </form>
                         <form id="btnSignup" action="/USER/signup/signup.php">
-                            <button  class="btn btn-outline-success" style="margin-left:5px;" type="submit">Đăng Ký</button>
+                            <button class="btn btn-outline-success" style="margin-left:5px;" type="submit">Đăng
+                                Ký</button>
                         </form>
                         <script>
-                            var a= getCookie('user1');
-                            if(a!='')
-                            {
+                            var a = getCookie('user1');
+                            if (a != '') {
                                 document.getElementById("btnLogin").setAttribute("style", "display:none");
                                 document.getElementById("btnLogout").setAttribute("style", "display:block");
+                                document.getElementById("headGirl").setAttribute("style", "visibility:inherit");
                             }
-                            else{
+                            else {
                                 document.getElementById("btnLogin").setAttribute("style", "display:block");
+                                document.getElementById("headGirl").setAttribute("style", "visibility:hidden");
                                 document.getElementById("btnLogOut").setAttribute("style", "display:none");
+
+
                             }
-                          
+
                         </script>
                     </div>
                 </div>
-             
             </div>
         </nav>
     </div>

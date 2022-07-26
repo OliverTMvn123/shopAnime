@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/homepage/index.css">
     <link rel="stylesheet" href="./productClientView.css">
+    <link rel='icon' href='/image/iconMenu.png' type='image/x-icon'> </link>
     <script src="/homepage/index.js"></script>
     <script src="../USER/signup/signup.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"

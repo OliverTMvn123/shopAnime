@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/homepage/index.css">
+    <link rel='icon' href='/image/iconMenu.png' type='image/x-icon'> </link>
     <script src="/homepage/index.js"></script>
     <script src="/USER/signup/signup.js"></script>
     <link rel="stylesheet" href="/USER/signup/signup.css">
@@ -116,6 +117,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th align="center">Tên Loại Sản Phẩm</th>
+                                <th>Thao Tác</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -128,6 +130,12 @@
                                     echo("<tr>
                                             <th>".$row['ID']."</th>
                                             <th >".$row['nameCategory']."</th>
+                                            <th>
+                                            <form action='repairCategoryView.php' method='get'>
+                                            <input type='text' class='hidden' name='id' value='".$row['ID']."'></input>
+                                                <button type='submit' class='btn btn-success'>sửa</button>
+                                            </form>    
+                                                </th>
                                         </tr>");
                                 }             
                                 ?>

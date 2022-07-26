@@ -115,28 +115,41 @@
                 <ul id="listmenu">
                     <li> <a href="productView.php" target="_top">Danh Sách Sản Phẩm</a></li>
                     <li><a href="categoryView.php" target="_top">Loại Sản Phẩm</a></li>
-                    <li  ><a href="addProductView.php" target="_top" >Thêm Sản Phẩm</a></li>
-                    <li style="background-color:lightskyblue"><a href="addCategoryView.php" target="_top">Thêm Loại Sản Phẩm</a></li>
+                    <li ><a href="addProductView.php" target="_top" >Thêm Sản Phẩm</a></li>
+                    <li><a href="addCategoryView.php" target="_top">Thêm Loại Sản Phẩm</a></li>
                     </ul>
             </div>        
             <div class="col-9" id='selectCP'>
-                  <h1 align="center"> Thêm Loại Sản Phẩm</h1>
+                  <h1 align="center"> Sửa Thông Tin Loại Sản Phẩm</h1>
                   <hr>  
                   <div class="listproduct">
-                    <form action="./backend/addCategory.php" class="was-validated" method="get">
+                    <form action="./backend/repairCategory.php" class="was-validated" method='post' enctype="multipart/form-data">
                         <div class="mb-3 mt-3">
                             <label for="uname" class="form-label">Tên Loại Sản Phẩm:</label>
-                            <input type="text" class="form-control" id="uname" placeholder="Enter Tên Loại Sản Phẩm" name="uname" required>
+                            <?php
+                                        require '../../ConnectDB.php';
+                                        $id= $_GET['id'];
+                                        $sql='SELECT * FROM `category` WHERE `ID`= '.$id;
+                                        $resuft=$conn->query($sql);
+                                        $row=$resuft->fetch_assoc();
+                                        if($conn->query($sql))
+                                        {
+                                            echo("<input type='text' class='form-control' id='uname' placeholder='Enter Tên Sản Phẩm' name='uname' value='".$row['nameCategory']."' required>
+                                            <input type='text' class='hidden' name='id' value=".$id.">
+                                            ");
+                                        }              
+                            ?>
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
+                                
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
-                            <label class="form-check-label" for="myCheck">I agree on create category.</label>
+                            <label class="form-check-label" for="myCheck">I agree on blabla.</label>
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Check this checkbox to continue.</div>
                         </div>
-
+                        
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>

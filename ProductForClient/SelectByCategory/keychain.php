@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/homepage/index.css">
     <link rel="stylesheet" href="../productClientView.css">
+    <link rel='icon' href='/image/iconMenu.png' type='image/x-icon'> </link>
     <script src="/homepage/index.js"></script>
     <script src="/USER/signup/signup.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  

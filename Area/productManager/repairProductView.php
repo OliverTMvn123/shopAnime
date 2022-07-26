@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/homepage/index.css">
+    <link rel='icon' href='/image/iconMenu.png' type='image/x-icon'> </link>
     <script src="/homepage/index.js"></script>
     <script src="/USER/signup/signup.js"></script>
     <link rel="stylesheet" href="/USER/signup/signup.css">
@@ -119,7 +120,7 @@
                     </ul>
             </div>        
             <div class="col-9" id='selectCP'>
-                  <h1 align="center"> Sửa Thông Tin Sản Phẩm Sản Phẩm</h1>
+                  <h1 align="center"> Sửa Thông Tin Sản Phẩm</h1>
                   <hr>  
                   <div class="listproduct">
                     <form action="./backend/repairProduct.php" class="was-validated" method='post' enctype="multipart/form-data">

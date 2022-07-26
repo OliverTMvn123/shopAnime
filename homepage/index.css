@@ -224,3 +224,24 @@ footer {
 .Info{
     height: 30%;
 }
+#cart{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    margin-left: 92%;
+    border-radius: 100%;
+}
+#cart img{
+    width: 100%;
+    height: 100%;
+}
+#numberItem{
+    text-align: center;
+    color: white;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    margin-left: 94%;
+    margin-top: 36px;
+    border-radius: 100%;
+}
