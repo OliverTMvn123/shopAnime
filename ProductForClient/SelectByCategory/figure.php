@@ -39,7 +39,45 @@
         </h5>
         <a onClick="visiableText()"><img id="headGirl" src="/image/head.png" width="100px" alt=""></a>
     </div>
-
+    <div class="cartControll">
+        <div id="cart" class='bg-light'>
+        <a href="/CART/cartView.php"><img src="/image/cart.png" alt="" ></a> 
+        </div>
+        <div id="numberItem" class='bg-danger'>
+                <?php
+                    require '../../ConnectDB.php';
+                    $nameUser=$_COOKIE['user1'];
+                
+                    $sql="SELECT `Cart` FROM `login` WHERE `Username`= '$nameUser'";
+                    $resuft=$conn->query($sql);
+                    $row=$resuft->fetch_assoc();
+                    if(!empty($nameUser))
+                    {
+                        if(empty($row['Cart']) )
+                        {
+                            echo("<script> 
+                            document.getElementById('numberItem').innerHTML=`<p style='padding-top:3px'>0</p>`;
+                            </script>");
+                        }
+                        else{
+                            $list = explode(",",$row['Cart']);
+                            $countItem=count($list);
+                           
+                            echo("<script> 
+                            document.getElementById('numberItem').innerHTML=`<p style='padding-top:3px'>$countItem</p>`;
+                            </script>");
+                        }
+                    }
+                    else{
+                        echo("<script> 
+                           
+                            document.getElementById('numberItem').innerHTML=`<p style='padding-top:3px'>0</p>`;
+                            </script>");
+                    }
+                    
+                ?>
+        </div>
+    </div>
     <div class="menu">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
@@ -113,7 +151,7 @@
                             else {
                                 document.getElementById("btnLogin").setAttribute("style", "display:block");
                                 document.getElementById("headGirl").setAttribute("style", "visibility:hidden");
-                                document.getElementById("btnLogOut").setAttribute("style", "display:none");
+                               // document.getElementById("btnLogOut").setAttribute("style", "display:none");
 
 
                             }

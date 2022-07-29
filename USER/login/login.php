@@ -24,6 +24,7 @@
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             }
+           
         </script>
     </div>
     <div id="detailItem" >
@@ -109,7 +110,7 @@
                             else {
                                 document.getElementById("btnLogin").setAttribute("style", "display:block");
                                 document.getElementById("headGirl").setAttribute("style", "visibility:hidden");
-                                document.getElementById("btnLogOut").setAttribute("style", "display:none");
+                                //document.getElementById("btnLogOut").setAttribute("style", "display:none");
 
 
                             }

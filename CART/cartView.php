@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/homepage/index.css">
-    <link rel="stylesheet" href="./productClientView.css">
+    <link rel="stylesheet" href="/CART/cartView.css">
     <link rel='icon' href='/image/iconMenu.png' type='image/x-icon'> </link>
-    <script src="/homepage/index.js"></script>
     <script src="../USER/signup/signup.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">    
     <title>AnimeShop
@@ -29,15 +29,12 @@
             }
         </script>
     </div>
-    <div class="ImageGirl">
-        <h5 id="SayHi" style="color:white;width: 100px; visibility:hidden;">Hi
-            <?php $user1=$_COOKIE['user1'];  echo("".$user1) ?>
-        </h5>
-        <a onClick="visiableText()"><img id="headGirl" src="/image/head.png" width="100px" alt=""></a>
+    <div id="detailItem" >
+            
     </div>
     <div class="cartControll">
         <div id="cart" class='bg-light'>
-        <a href="/CART/cartView.php"><img src="/image/cart.png" alt="" ></a> 
+               <a href="/CART/cartView.php"><img src="/image/cart.png" alt="" ></a> 
         </div>
         <div id="numberItem" class='bg-danger'>
                 <?php
@@ -66,7 +63,7 @@
                     }
                     else{
                         echo("<script> 
-                            console.log(document.cookie);
+                          
                             document.getElementById('numberItem').innerHTML=`<p style='padding-top:3px'>0</p>`;
                             </script>");
                     }
@@ -74,6 +71,14 @@
                 ?>
         </div>
     </div>
+    
+    <div class="ImageGirl">
+        <h5 id="SayHi" style="color:white;width: 100px; visibility:hidden;">Hi
+            <?php $user1=$_COOKIE['user1'];  echo("".$user1) ?>
+        </h5>
+        <a onClick="visiableText()"><img id="headGirl" src="/image/head.png" width="100px" alt=""></a>
+    </div>
+
     <div class="menu">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
@@ -86,7 +91,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/homepage/index.php">Trang Chủ</a>
+                            <a class="nav-link active" aria-current="page" href="#">Trang Chủ</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -94,21 +99,21 @@
                                 Sản phẩm
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./SelectByCategory/figure.php?id=0">Mô hình</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/figure.php?id=0">Mô hình</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./SelectByCategory/clothes.php?id=0">Áo - Trang Phục</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/clothes.php?id=0">Áo - Trang Phục</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./SelectByCategory/BaloAndMore.php?id=0">Balo dụng cụ học tập</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/BaloAndMore.php?id=0">Balo dụng cụ học tập</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./SelectByCategory/keychain.php?id=0">Móc Khóa Huy Hiệu</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/keychain.php?id=0">Móc Khóa Huy Hiệu</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./SelectByCategory/Accessories.php?id=0">Trang sức</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/Accessories.php?id=0">Trang sức</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./SelectByCategory/watch.php?id=0">Đồng Hồ</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/watch.php?id=0">Đồng Hồ</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./SelectByCategory/Comingsoon.php?id=0">Gối Thú Nhồi Bông</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/Comingsoon.php?id=0">Gối Thú Nhồi Bông</a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="./SelectByCategory/Comingsoon.php?id=0">In Sản Phẩm Theo Yêu Cầu</a></li>
+                                <li><a class="dropdown-item" href="/ProductForClient/SelectByCategory/Comingsoon.php?id=0">In Sản Phẩm Theo Yêu Cầu</a></li>
 
                             </ul>
                         </li>
@@ -151,7 +156,6 @@
 
 
                             }
-
                         </script>
                     </div>
                 </div>
@@ -163,75 +167,95 @@
             <div class="col-2" id="leftmenu">
                 <ul id="listmenu">
                 <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon1.png?v=245"
-                            alt=""> <a href="./SelectByCategory/figure.php?id=0" target="_top">Mô hình</a></li>
+                            alt=""> <a href="/ProductForClient/SelectByCategory/figure.php?id=0" target="_top">Mô hình</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon2.png?v=245"
-                            alt=""><a href="./SelectByCategory/clothes.php?id=0" target="_top"> Áo - Trang Phục</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/clothes.php?id=0" target="_top"> Áo - Trang Phục</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon3.png?v=245"
-                            alt=""><a href="./SelectByCategory/BaloAndMore.php?id=0" target="_top"> Balo dụng cụ học tập</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/BaloAndMore.php?id=0" target="_top"> Balo dụng cụ học tập</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon4.png?v=245"
-                            alt=""><a href="./SelectByCategory/keychain.php?id=0" target="_top"> Móc Khóa Huy Hiệu</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/keychain.php?id=0" target="_top"> Móc Khóa Huy Hiệu</a></li>
                     <li> <img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon5.png?v=245"
-                            alt=""><a href="./SelectByCategory/Accessories.php?id=0" target="_top"> Trang sức</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/Accessories.php?id=0" target="_top"> Trang sức</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon6.png?v=245"
-                            alt=""> <a href="./SelectByCategory/watch.php?id=0" target="_top"> Đồng Hồ</a></li>
+                            alt=""> <a href="/ProductForClient/SelectByCategory/watch.php?id=0" target="_top"> Đồng Hồ</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon7.png?v=245"
-                            alt=""><a href="./SelectByCategory/Comingsoon.php?id=0" target="_top"> Phụ Kiện Đầu</a> </li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/Comingsoon.php?id=0" target="_top"> Phụ Kiện Đầu</a> </li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon8.png?v=245"
-                            alt=""><a href="./SelectByCategory/Comingsoon.php?id=0" target="_top"> Gối Thú Nhồi Bông</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/Comingsoon.php?id=0" target="_top"> Gối Thú Nhồi Bông</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon9.png?v=245"
-                            alt=""><a href="./SelectByCategory/Comingsoon.php?id=0" target="_top"> In Sản Phẩm Theo Yêu Cầu</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/Comingsoon.php?id=0" target="_top"> In Sản Phẩm Theo Yêu Cầu</a></li>
                     <li><img src="https://theme.hstatic.net/1000273792/1000446123/14/sidebarleft_icon10.png?v=245"
-                            alt=""><a href="./SelectByCategory/Comingsoon.php?id=0" target="_top"> Phụ Kiện Khác</a></li>
+                            alt=""><a href="/ProductForClient/SelectByCategory/Comingsoon.php?id=0" target="_top"> Phụ Kiện Khác</a></li>
                 </ul>
 
             </div>
-           
             <div class="col-9 rightContent">
-                <div class="col-9" style="height:30px"></div>
-                <div class="row SelectProduct">
-                <?php
-                require '../ConnectDB.php';
-                $searchKey=$_GET['search'];
-                $sql1='SELECT COUNT(*) FROM `product` WHERE `nameProduct`="'.$searchKey.'"' ;
-                $resuft1= $conn->query($sql1);
-                $countList= $resuft1->fetch_assoc();
-                echo("<h3> Kết Quả Tìm Kiếm Cho: ".$searchKey."</h3>");
-                if($countList['COUNT(*)']!=0)
-                {
-                  
-                    $sql='SELECT * FROM `product` WHERE `nameProduct`="'.$searchKey.'"';
-                    $resuft= $conn->query($sql);
-                    $count=0;
-                    $list1;
-                    while($row=$resuft->fetch_assoc())
-                    {
-                            
-                            echo(' <div class="col-3 divProduct">
-                                <img src="/Area/productManager/uploads/'.$row['image'].'" class="imageProduct" alt="">
-                                <div class="infor">
-                                    <div class="name">
-                                        <h5>'.$row['nameProduct'].'</h5>
-                                    </div>
-                                    <div class="Price">
-                                    <h3 style="color:red">'.$row['Price'].'$</h3>   
-                                    </div>
-                                    <div class="btnProduct">
-                                        <button width="10px" onClick="detailt('.$row['ID'].')" type="submit"><img src="/image/searchIcon.png" width="15px" alt=""></button>
-                                        <button> Thêm vào giỏ hàng</button>
-                                    </div>
-                                </div>
-                                </div>');
-                        }
-                    }
-                else{
-                    echo("<h1 style='color:red; text-align:center; margin-top:50px'> KHÔNG TÌM THẤY SẢN PHẨM NÀO GIỐNG VỚI BẠN TÌM KIẾM Ở ĐÂY </h1> <img src='/image/iconMenu.png'  width='300px' height='700'>");
-                 }
                 
-               ?>
-                </div>                     
+                   <!-- CART CONTROLLER -->
+                   <h1 align="center"> Giỏ Hàng Của Bạn</h1>
+                  <hr>  
+                  <div class="listproduct">
+                  <table class="table table-striped" id="table">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên Sản Phẩm</th>
+                            <th>Loại Sản Phẩm</th>
+                            <th>Giá Bán</th>
+                            <th>Hình Ảnh</th>
+                            <th>Thao Tác</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <?php
+                            if(!emtpy($_COOKIE['user1']))
+                            {
+                               require '../ConnectDB.php';
+                               $sql='SELECT * FROM `product`';
+                               $resuft=$conn->query($sql);
+                               $nameUser= $_COOKIE['user1'];
+                               $sql1="SELECT `Cart` FROM `login` WHERE `Username`= '$nameUser'"
+                               $resuft1=$conn->query($sql1);
+                               $list= explode($row['Cart']);
+                               //đang ở đây
+
+                               while($row=$resuft->fetch_assoc())
+                               {
+                                $image=$row['image'];
+                                echo("<tr>
+                                        <th>".$row['ID']."</th>
+                                        <th>".$row['nameProduct']."</th>
+                                        <th>".$row['nameCategory']."</th>
+                                        <th>".$row['Price']."</th>
+                                        <th>
+                                            <img src='/Area/productManager/uploads/".$image."' alt='' width='60' height='60'>
+                                        </th>
+                                        <th>
+                                        <form action='repairProductView.php' method='get'>
+                                        <input type='text' class='hidden' name='id' value='".$row['ID']."'></input>
+                                            <button type='submit' class='btn btn-success'>sửa</button>
+                                        </form>    
+                                            </th>
+                                    </tr>");
+                               }  
+                            }
+                            else{
+                                echo("<h1 style='color:red; text-align:center; margin-top:50px'> KHÔNG CÓ BẤT KÌ SẢN PHẨM NÀO Ở ĐÂY
+                         </h1> <img src='/image/iconMenu.png'  width='300px' height='700'>");
+                            }           
+                            ?>
+                           
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+                  </div>
+
+                
             </div>
         </div>
-        
+            <script  type="text/javascript"  src="/homepage/index.js"></script>
     </div>
     <footer class="bg-light text-center text-white">
         <!-- Grid container -->

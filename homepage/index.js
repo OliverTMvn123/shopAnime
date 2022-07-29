@@ -31,6 +31,9 @@ function detailt1(i){
     })    
 
 }
+var delete_cookie = function(name) {
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+};
 function addtoCart(id){
      console.log(document.cookie);
     // var a = getCookie("CART").split(",");
@@ -38,7 +41,7 @@ function addtoCart(id){
     //document.cookie = 'tam=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     $(document).ready(function(){
         $.get("./setup/addItemtoCart.php",{id1:id},function(data){
-            $("numberCart").html(data)
+            $("#numberItem").html(data)
         });
     })
 }

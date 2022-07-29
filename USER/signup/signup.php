@@ -109,7 +109,7 @@
                             else {
                                 document.getElementById("btnLogin").setAttribute("style", "display:block");
                                 document.getElementById("headGirl").setAttribute("style", "visibility:hidden");
-                                document.getElementById("btnLogOut").setAttribute("style", "display:none");
+                                //document.getElementById("btnLogOut").setAttribute("style", "display:none");
 
 
                             }

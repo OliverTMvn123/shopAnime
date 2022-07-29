@@ -53,7 +53,7 @@ else{
     }
     else{
         echo"<script>alert('Tài Khoản Hoặc Mật Khẩu Của Bạn Đã Sai Xin Vui Lòng Kiểm Tra Lại!!') </script>";
-        echo("<script> location='./login.html' </script>");
+        echo("<script> location='./login.php' </script>");
     }
 }
 ?>

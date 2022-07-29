@@ -1,0 +1,12 @@
+.listproduct{
+    max-height: 800px;
+    overflow-y: scroll;
+    
+}
+.hidden{
+    display:none;
+}
+.rightContent{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

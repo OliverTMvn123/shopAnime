@@ -33,21 +33,41 @@
     </div>
     <div class="cartControll">
         <div id="cart" class='bg-light'>
-                <img src="/image/cart.png" alt="" >
+               <a href="/CART/cartView.php"><img src="/image/cart.png" alt="" ></a> 
         </div>
         <div id="numberItem" class='bg-danger'>
-                <script>
-                        var a = getCookie("CART").split(",");
-                        if(a=='')
+                <?php
+                    require '../ConnectDB.php';
+                    $nameUser=$_COOKIE['user1'];
+                
+                    $sql="SELECT `Cart` FROM `login` WHERE `Username`= '$nameUser'";
+                    $resuft=$conn->query($sql);
+                    $row=$resuft->fetch_assoc();
+                    if(!empty($nameUser))
+                    {
+                        if(empty($row['Cart']) )
                         {
-                            document.getElementById("numberItem").innerHTML=" <p style='padding-top:3px'>"+0+"</p>";
-                            
+                            echo("<script> 
+                            document.getElementById('numberItem').innerHTML=`<p style='padding-top:3px'>0</p>`;
+                            </script>");
                         }
                         else{
-                            document.getElementById("numberItem").innerHTML=" <p style='padding-top:3px'>"+a.length+"</p>";
+                            $list = explode(",",$row['Cart']);
+                            $countItem=count($list);
+                           
+                            echo("<script> 
+                            document.getElementById('numberItem').innerHTML=`<p style='padding-top:3px'>$countItem</p>`;
+                            </script>");
                         }
-                       
-                </script>
+                    }
+                    else{
+                        echo("<script> 
+                            
+                            document.getElementById('numberItem').innerHTML=`<p style='padding-top:3px'>0</p>`;
+                            </script>");
+                    }
+                    
+                ?>
         </div>
     </div>
     
@@ -131,7 +151,7 @@
                             else {
                                 document.getElementById("btnLogin").setAttribute("style", "display:block");
                                 document.getElementById("headGirl").setAttribute("style", "visibility:hidden");
-                                document.getElementById("btnLogOut").setAttribute("style", "display:none");
+                                //document.getElementById("btnLogOut").setAttribute("style", "display:none");
 
 
                             }
