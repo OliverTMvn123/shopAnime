@@ -215,7 +215,7 @@
                                $sql='SELECT * FROM `product`';
                                $resuft=$conn->query($sql);
                                $nameUser= $_COOKIE['user1'];
-                               $sql1="SELECT `Cart` FROM `login` WHERE `Username`= '$nameUser'"
+                               $sql1="SELECT `Cart` FROM `login` WHERE `Username`= '$nameUser'";
                                $resuft1=$conn->query($sql1);
                                $list= explode($row['Cart']);
                                //đang ở đây
